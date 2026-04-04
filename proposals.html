@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Proposals | William Yixiang Zheng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --panel-strong: #ffffff;
+            --ink: #152033;
+            --muted: #51617b;
+            --line: rgba(21, 32, 51, 0.12);
+            --accent: #0a6c74;
+            --accent-deep: #0f3f55;
+            --accent-soft: #dff3ef;
+            --status-bg: rgba(226, 138, 68, 0.12);
+            --status-ink: #9a5b26;
+            --shadow: 0 24px 60px rgba(21, 32, 51, 0.12);
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            font-family: "Plus Jakarta Sans", sans-serif;
+            line-height: 1.7;
+            background: linear-gradient(180deg, #f8f4eb 0%, #f3efe6 100%);
+        }
+
+        h1, h2, h3 {
+            font-family: "Source Serif 4", serif;
+            letter-spacing: -0.02em;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .navbar {
+            background: rgba(248, 244, 235, 0.86);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(21, 32, 51, 0.08);
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            color: var(--accent-deep);
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--muted);
+        }
+
+        .nav-link:hover,
+        .nav-link:focus,
+        .nav-link.active {
+            color: var(--accent-deep) !important;
+        }
+
+        .dropdown-menu {
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .dropdown-item {
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .dropdown-item:hover,
+        .dropdown-item:focus {
+            color: var(--accent-deep);
+            background: rgba(10, 108, 116, 0.08);
+        }
+
+        .hero-shell {
+            padding: 3.2rem 0 1.6rem;
+        }
+
+        .hero-card,
+        .proposal-card {
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            background: var(--panel-strong);
+            box-shadow: var(--shadow);
+        }
+
+        .hero-card,
+        .proposal-card {
+            padding: 1.6rem;
+        }
+
+        .hero-kicker,
+        .section-kicker {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.8rem;
+            font-weight: 800;
+        }
+
+        .hero-kicker {
+            margin-bottom: 0.55rem;
+        }
+
+        .hero-title {
+            margin: 0 0 0.9rem;
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            line-height: 1;
+        }
+
+        .hero-copy,
+        .card-copy {
+            color: var(--muted);
+        }
+
+        .section-block {
+            padding: 1.45rem 0;
+        }
+
+        .section-header {
+            margin-bottom: 1.25rem;
+        }
+
+        .section-title {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+        }
+
+        .stack-list {
+            display: grid;
+            gap: 1.25rem;
+        }
+
+        .proposal-card {
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .proposal-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(10, 108, 116, 0.22);
+        }
+
+        .card-tag {
+            display: inline-flex;
+            padding: 0.35rem 0.7rem;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent-deep);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .card-title {
+            margin: 1rem 0 0.8rem;
+            font-size: 1.56rem;
+            line-height: 1.15;
+        }
+
+        .status-tag {
+            display: inline-flex;
+            padding: 0.4rem 0.75rem;
+            border-radius: 999px;
+            background: var(--status-bg);
+            color: var(--status-ink);
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+
+        .card-link {
+            display: inline-flex;
+            margin-top: 1rem;
+            font-weight: 800;
+            color: var(--accent-deep);
+            text-decoration: none;
+        }
+
+        .card-link:hover,
+        .card-link:focus {
+            color: var(--accent);
+        }
+
+        footer {
+            padding: 2rem 0 3.2rem;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 575.98px) {
+            .hero-card,
+            .proposal-card {
+                border-radius: 22px;
+                padding: 1.3rem;
+            }
+
+            .hero-title {
+                font-size: 2.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container py-2">
+            <a class="navbar-brand" href="index.html">WYZ Neuro Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <a class="nav-link pe-1" href="index.html">Home</a>
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split ps-1" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">Toggle Home menu</span></a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="homeDropdown">
+                            <li><a class="dropdown-item" href="index.html#introduction">Introduction</a></li>
+                            <li><a class="dropdown-item" href="index.html#projects">Projects</a></li>
+                            <li><a class="dropdown-item" href="index.html#proposals">Proposals</a></li>
+                            <li><a class="dropdown-item" href="index.html#experience">Experience</a></li>
+                            <li><a class="dropdown-item" href="index.html#contacts">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <a class="nav-link pe-1" href="research.html">Research Page</a>
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split ps-1" href="#" id="researchDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">Toggle Research menu</span></a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="researchDropdown">
+                            <li><a class="dropdown-item" href="research.html#project-drift">Project Drift</a></li>
+                            <li><a class="dropdown-item" href="research.html#project-territory">Project Territory</a></li>
+                            <li><a class="dropdown-item" href="research.html#project-fabrication">Project Fabrication</a></li>
+                            <li><a class="dropdown-item" href="research.html#peking-university">Research in Peking University</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <a class="nav-link active pe-1" aria-current="page" href="proposals.html">Proposal</a>
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split ps-1" href="#" id="proposalDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">Toggle Proposal menu</span></a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="proposalDropdown">
+                            <li><a class="dropdown-item" href="#proposal-1">Proposal 1</a></li>
+                            <li><a class="dropdown-item" href="#proposal-2">Proposal 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="section-block">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-kicker">Research Proposals</div>
+                    <h2 class="section-title">Current proposal drafts</h2>
+                </div>
+                <div class="stack-list">
+                    <article id="proposal-1" class="proposal-card">
+                        <div class="card-tag">Proposal 01</div>
+                        <h3 class="card-title">Closed-loop prioritized hippocampal replay in brain-machine interface of value-biased choice</h3>
+                        <p class="card-copy">
+                            A closed-loop BMI experiment asking whether hippocampal sequences act like prioritized
+                            experience replay by reinforcing high-value trajectories in real time.
+                        </p>
+                        <div class="status-tag">Topic: BMI, replay, reinforcement learning</div>
+                        <a class="card-link" href="proposal_doc/BioNB3500_Mini-Grant Proposal v4R.pdf" download="BioNB3500_Mini-Grant_Proposal_v4R.pdf">Read proposal draft</a>
+                    </article>
+
+                    <article id="proposal-2" class="proposal-card">
+                        <div class="card-tag">Proposal 02</div>
+                        <h3 class="card-title">Circuit mechanisms of representational drift and neural manifold collapse in Alzheimer's Disease</h3>
+                        <p class="card-copy">
+                            A developing proposal on how circuit pathology may destabilize neural representations,
+                            reshape drift, and collapse manifolds relevant to memory function.
+                        </p>
+                        <div class="status-tag">Topic: Alzheimer's Disease, topology, neural manifolds</div>
+                        <a class="card-link" href="proposal_doc/AD_NeuralManifold_v3.pdf" download="AD_NeuralManifold_v3.pdf">Read proposal draft</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            Research proposals for William Yixiang Zheng.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

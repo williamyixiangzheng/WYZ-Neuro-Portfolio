@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | William Yixiang Zheng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --panel-strong: #ffffff;
+            --ink: #152033;
+            --muted: #51617b;
+            --line: rgba(21, 32, 51, 0.12);
+            --accent: #0a6c74;
+            --accent-deep: #0f3f55;
+            --accent-soft: #dff3ef;
+            --status-bg: rgba(226, 138, 68, 0.12);
+            --status-ink: #9a5b26;
+            --shadow: 0 24px 60px rgba(21, 32, 51, 0.12);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            font-family: "Plus Jakarta Sans", sans-serif;
+            line-height: 1.7;
+            background: linear-gradient(180deg, #f8f4eb 0%, #f3efe6 100%);
+        }
+
+        h1, h2, h3 {
+            font-family: "Source Serif 4", serif;
+            letter-spacing: -0.02em;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .navbar {
+            background: rgba(248, 244, 235, 0.86);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(21, 32, 51, 0.08);
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            color: var(--accent-deep);
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--muted);
+        }
+
+        .nav-link:hover,
+        .nav-link:focus,
+        .nav-link.active {
+            color: var(--accent-deep) !important;
+        }
+
+        .dropdown-menu {
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .dropdown-item {
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .dropdown-item:hover,
+        .dropdown-item:focus {
+            color: var(--accent-deep);
+            background: rgba(10, 108, 116, 0.08);
+        }
+
+        .hero-shell {
+            padding: 3.2rem 0 1.6rem;
+        }
+
+        .hero-card,
+        .summary-panel,
+        .content-card,
+        .experience-card {
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            background: var(--panel-strong);
+            box-shadow: var(--shadow);
+        }
+
+        .hero-card {
+            padding: 2rem;
+        }
+
+        .hero-kicker,
+        .section-kicker {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.8rem;
+            font-weight: 800;
+        }
+
+        .hero-kicker {
+            margin-bottom: 0.55rem;
+        }
+
+        .hero-title {
+            margin: 0 0 0.9rem;
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            line-height: 1;
+        }
+
+        .hero-copy {
+            max-width: 760px;
+            margin: 0;
+            color: var(--muted);
+            font-size: 1.04rem;
+        }
+
+        .section-block {
+            padding: 1.45rem 0;
+        }
+
+        .section-anchor {
+            scroll-margin-top: 88px;
+        }
+
+        .section-header {
+            margin-bottom: 1.25rem;
+        }
+
+        .section-title {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 2.8rem);
+        }
+
+        .summary-panel {
+            padding: 1.5rem;
+        }
+
+        .summary-panel p:last-child {
+            margin-bottom: 0;
+        }
+
+        .stack-list {
+            display: grid;
+            gap: 1.25rem;
+        }
+
+        .content-card,
+        .experience-card {
+            padding: 1.5rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .content-card:hover,
+        .experience-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(10, 108, 116, 0.22);
+        }
+
+        .card-tag {
+            display: inline-flex;
+            padding: 0.35rem 0.7rem;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent-deep);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .card-title {
+            margin: 1rem 0 0.8rem;
+            font-size: 1.56rem;
+            line-height: 1.15;
+        }
+
+        .card-copy {
+            color: var(--muted);
+            margin-bottom: 1.05rem;
+        }
+
+        .status-tag {
+            display: inline-flex;
+            padding: 0.4rem 0.75rem;
+            border-radius: 999px;
+            background: var(--status-bg);
+            color: var(--status-ink);
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+
+        .card-link,
+        .external-link {
+            font-weight: 800;
+            color: var(--accent-deep);
+            text-decoration: none;
+        }
+
+        .card-link:hover,
+        .card-link:focus,
+        .external-link:hover,
+        .external-link:focus {
+            color: var(--accent);
+        }
+
+        .skill-button {
+            padding: 0;
+            border: 0;
+            background: none;
+            color: var(--accent-deep);
+            font-weight: 800;
+        }
+
+        .skill-button:hover,
+        .skill-button:focus {
+            color: var(--accent);
+        }
+
+        .link-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skills-panel {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--line);
+        }
+
+        .skills-label {
+            margin-bottom: 0.7rem;
+            color: var(--muted);
+            font-size: 0.92rem;
+            font-weight: 700;
+        }
+
+        .skills-text {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .note-line {
+            margin-top: 1rem;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            padding: 2rem 0 3.2rem;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 575.98px) {
+            .hero-shell {
+                padding-top: 2.5rem;
+            }
+
+            .hero-card,
+            .summary-panel,
+            .content-card,
+            .experience-card {
+                border-radius: 22px;
+                padding: 1.3rem;
+            }
+
+            .hero-title {
+                font-size: 2.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container py-2">
+            <a class="navbar-brand" href="index.html">WYZ Neuro Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <a class="nav-link pe-1" href="index.html">Home</a>
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split ps-1" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">Toggle Home menu</span></a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="homeDropdown">
+                            <li><a class="dropdown-item" href="index.html#introduction">Introduction</a></li>
+                            <li><a class="dropdown-item" href="index.html#projects">Projects</a></li>
+                            <li><a class="dropdown-item" href="index.html#proposals">Proposals</a></li>
+                            <li><a class="dropdown-item" href="index.html#experience">Experience</a></li>
+                            <li><a class="dropdown-item" href="index.html#contacts">Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <a class="nav-link active pe-1" aria-current="page" href="research.html">Research Page</a>
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split ps-1" href="#" id="researchDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">Toggle Research menu</span></a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="researchDropdown">
+                            <li><a class="dropdown-item" href="#project-drift">Project Drift</a></li>
+                            <li><a class="dropdown-item" href="#project-territory">Project Territory</a></li>
+                            <li><a class="dropdown-item" href="#project-fabrication">Project Fabrication</a></li>
+                            <li><a class="dropdown-item" href="#peking-university">Research in Peking University</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <a class="nav-link pe-1" href="proposals.html">Proposal</a>
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split ps-1" href="#" id="proposalDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">Toggle Proposal menu</span></a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="proposalDropdown">
+                            <li><a class="dropdown-item" href="proposals.html#proposal-1">Proposal 1</a></li>
+                            <li><a class="dropdown-item" href="proposals.html#proposal-2">Proposal 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <section id="projects" class="section-block section-anchor">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-kicker">Main Projects</div>
+                    <h2 class="section-title">Current research directions</h2>
+                </div>
+                <div class="stack-list">
+                    <article id="project-drift" class="content-card">
+                        <div class="card-tag">Project Drift</div>
+                        <h3 class="card-title">A hippocampal population code for rapid generalization</h3>
+                        <p class="card-copy">
+                            CA1 population activity uses a disentangled code for location, time, and choice, while CA3,
+                            MEC, and local PV-interneurons shape remapping and representational drift.
+                        </p>
+                        <div class="status-tag">Status: Pre-print</div>
+                        <div class="link-row">
+                            <a class="card-link" href="Project_Drift.html">Open project page</a>
+                            <a class="external-link" href="https://www.biorxiv.org/content/10.1101/2025.03.15.643456v1" target="_blank" rel="noreferrer">View preprint</a>
+                            <button class="skill-button" type="button" data-bs-toggle="collapse" data-bs-target="#skills-drift-research" aria-expanded="false" aria-controls="skills-drift-research">Show learned skills</button>
+                        </div>
+                        <div class="collapse" id="skills-drift-research">
+                            <div class="skills-panel">
+                                <p class="skills-text">
+                                    • Conducted mouse behavioral tasks, Arduino coding, mouse optogenetic fiber surgery, perfusion, and imaging
+                                </p>
+                                <p class="skills-text">
+                                    • Individual mini project: investigated topological data analysis, high dimensionality reduction, and hippocampal neural manifold analysis in 1) familiar vs. unfamiliar tracks 2) and changes across long-term recording (~300 days using flexible probe)
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="project-territory" class="content-card">
+                        <div class="card-tag">Project Territory</div>
+                        <h3 class="card-title">A socio-spatial cognitive map of naturalistic environment</h3>
+                        <p class="card-copy">
+                            We study male mice in a semi-natural outdoor enclosure to understand how hippocampal place
+                            cell activity evolves during territory formation, defense, and intrusion.
+                        </p>
+                        <div class="status-tag">Status: In prep / unpublished manuscript</div>
+                        <div class="link-row">
+                            <a class="card-link" href="Project_Fieldwork.html">Open project page</a>
+                            <button class="skill-button" type="button" data-bs-toggle="collapse" data-bs-target="#skills-territory-research" aria-expanded="false" aria-controls="skills-territory-research">Show learned skills</button>
+                        </div>
+                        <div class="collapse" id="skills-territory-research">
+                            <div class="skills-panel">
+                                <p class="skills-text">
+                                    • Performed Neuropixels silicon probe surgeries and executed naturalistic outdoor behavioral tasks (territory competition) using wireless neuro-datalogger setups
+                                </p>
+                                <p class="skills-text">
+                                    • Designed 3D-printed headstages and involved in building automated pipelines for multi-animal identity tracking, combining mouse trajectory and IMU data with PCB/CE32 console recordings
+                                </p>
+                                <p class="skills-text">
+                                    • Analyzed high-dimensional neural population dynamics, performing spike sorting, DeepLabCut, Yolo, sharp- wave ripple detection, analyzing cell metrics and unique place cell properties under different territories and behavioral tasks, and modeling theta sweeps and neural manifold topology
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="project-fabrication" class="content-card">
+                        <div class="card-tag">Project Fabrication</div>
+                        <h3 class="card-title">Long-term, large-scale neural recordings across memory circuits with high-density flexible probes</h3>
+                        <p class="card-copy">
+                            This work develops polymer-based flexible thin-film probes to reduce tissue-device mismatch
+                            and support stable long-term single-neuron tracking across memory circuits.
+                        </p>
+                        <div class="status-tag">Status: In prep / unpublished manuscript</div>
+                        <div class="link-row">
+                            <a class="card-link" href="Project_Fabrication.html">Open project page</a>
+                            <button class="skill-button" type="button" data-bs-toggle="collapse" data-bs-target="#skills-fabrication-research" aria-expanded="false" aria-controls="skills-fabrication-research">Show learned skills</button>
+                        </div>
+                        <div class="collapse" id="skills-fabrication-research">
+                            <div class="skills-panel">
+                                <p class="skills-text">
+                                    • Conducted large-scale hippocampal electrophysiological recordings in behaving mice across multiple environments, supporting experimental design with custom Arduino coding, DLC, perfusions, and imaging
+                                </p>
+                                <p class="skills-text">
+                                    • Extracted and analyzed neural population dynamics from high-dimensional electrophysiological data; analyzed place cell stability across ~300-day recording in the single-cell level by using spike sorting
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section-block section-anchor">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-kicker">Earlier Experience</div>
+                </div>
+                <article id="peking-university" class="experience-card">
+                    <div class="card-tag">Peking University</div>
+                    <h3 class="card-title">Molecular neuroscience work related to Huntington's disease</h3>
+                    <p class="card-copy">
+                        Before shifting more deeply into computational and systems neuroscience, I worked on Huntington's
+                        disease-related research using the CRISPR system in Dr. Chenjian Li's lab at Peking University.
+                    </p>
+                    <p class="card-copy">
+                        Related publication: Yuanyi Dai <em>et al.,</em> Self-inactivating AAV-CRISPR at different ages enables sustained 
+                        amelioration of Huntington’s disease deficits in BAC226Q mice. <em>Sci. Adv.</em> 12, eaea8052 (2026). DOI:10.1126/sciadv.aea8052
+                    </p>
+                    <div class="link-row">
+                        <a class="card-link" href="Research_In_Peking_University.html">Open experience page</a>
+                        <a class="external-link" href="https://www.science.org/doi/10.1126/sciadv.aea8052" target="_blank" rel="noreferrer">View publication</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            Research overview for William Yixiang Zheng.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

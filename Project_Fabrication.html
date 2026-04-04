@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Fabrication — Coming Soon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f5f1e8;
+            --panel: rgba(255,255,255,0.84);
+            --ink: #152033;
+            --muted: #51617b;
+            --line: rgba(21,32,51,0.12);
+            --accent: #0a6c74;
+            --accent-deep: #0f3f55;
+            --accent-soft: #dff3ef;
+            --shadow: 0 24px 60px rgba(21,32,51,0.12);
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: "Plus Jakarta Sans", sans-serif;
+            background: linear-gradient(180deg, #f8f4eb 0%, #f3efe6 100%);
+            color: var(--ink);
+        }
+        .navbar {
+            background: rgba(248,244,235,0.86);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(21,32,51,0.08);
+        }
+        .navbar-brand {
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            color: var(--accent-deep);
+            text-decoration: none;
+        }
+        .nav-link {
+            font-weight: 600;
+            color: var(--ink);
+            text-decoration: none;
+            padding: 0.4rem 0.75rem;
+        }
+        .nav-link:hover { color: var(--accent); }
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 1rem;
+        }
+        .lock-card {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+            max-width: 520px;
+            width: 100%;
+            padding: 3rem 2.5rem;
+            text-align: center;
+        }
+        .lock-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--accent-soft);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+        }
+        .tag {
+            display: inline-flex;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            background: rgba(226,138,68,0.12);
+            color: #9a5b26;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+        }
+        h1 {
+            font-family: "Source Serif 4", serif;
+            font-size: 1.9rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+            color: var(--ink);
+        }
+        p {
+            color: var(--muted);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 0.65rem 1.4rem;
+            border-radius: 999px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .back-btn:hover { background: var(--accent-deep); color: #fff; }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.82rem;
+            color: var(--muted);
+            border-top: 1px solid var(--line);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar sticky-top">
+        <div class="container py-2 d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="index.html">WYZ Neuro Portfolio</a>
+            <div class="d-flex gap-2">
+                <a class="nav-link" href="research.html">Research</a>
+                <a class="nav-link" href="proposals.html">Proposals</a>
+                <a class="nav-link" href="about.html">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="lock-card">
+            <div class="lock-icon">&#128274;</div>
+            <div class="tag">Coming Soon</div>
+            <h1>Project Fabrication</h1>
+            <p>This project page is currently under construction and not yet available to the public. Please check back later for updates.</p>
+            <a class="back-btn" href="index.html">&#8592; Back to Portfolio</a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2025 William Yixiang Zheng &mdash; WYZ Neuro Portfolio
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
