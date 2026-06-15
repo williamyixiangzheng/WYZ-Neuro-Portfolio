@@ -1,33 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- keywords: William Zheng, William Zheng Cornell -->
+<!-- keywords: William Zheng, William Zheng Cornell, Y. William Zheng -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/</loc>
+    <lastmod>2026-06-14</lastmod>
     <priority>1.0</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/research.html</loc>
+    <lastmod>2026-06-14</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/proposals.html</loc>
+    <lastmod>2026-06-14</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/Project_Drift.html</loc>
+    <lastmod>2026-06-14</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/Project_Fieldwork.html</loc>
+    <lastmod>2026-06-14</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/Project_Fabrication.html</loc>
+    <lastmod>2026-06-14</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/Research_In_Peking_University.html</loc>
+    <lastmod>2026-06-14</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/about.html</loc>
+    <lastmod>2026-06-14</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>

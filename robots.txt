@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/sitemap.xml
