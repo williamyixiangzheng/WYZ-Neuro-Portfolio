@@ -3,102 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Drift | Y. William Zheng</title>
-    <meta name="description" content="Project Drift — neuroscience research on neural signal drift by Y. William Zheng, presented at SfN 2025.">
-    <meta name="keywords" content="William Zheng, William Zheng Cornell, Y. William Zheng, Project Drift, neural drift, SfN 2025, computational neuroscience, electrode drift">
+    <title>A hippocampal population code for rapid generalization | Y. William Zheng</title>
+    <meta name="description" content="Preprint research on how hippocampal population dynamics support rapid generalization, with contributions by Y. William Zheng at Cornell University.">
     <meta name="author" content="Y. William Zheng">
+    <link rel="canonical" href="https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/Project_Drift.html">
+    <meta property="og:title" content="A hippocampal population code for rapid generalization">
+    <meta property="og:description" content="Preprint research on how hippocampal population dynamics support rapid generalization from limited experience.">
+    <meta property="og:url" content="https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/Project_Drift.html">
+    <meta property="og:type" content="article">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet">
-    <style>
-        :root{--bg:#ffffff;--ink:#1a1a1a;--muted:#6b7280;--soft:#9ca3af;--line:#e7e7e7;--accent:#1f6feb;--sidebar:#15294d;--sidebar-soft:rgba(255,255,255,0.72);--sidebar-line:rgba(255,255,255,0.14);--sidebar-active:#ffd166;--sidebar-w:280px;--max:870px;}
-        *{box-sizing:border-box;}
-        html{scroll-behavior:smooth;overflow-y:scroll;}
-        body{margin:0;color:var(--ink);background:var(--bg);font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;font-size:16px;}
-        a{color:var(--accent);text-decoration:none;}
-        a:hover{text-decoration:underline;}
-        .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
-        .sidebar{position:fixed;top:0;left:0;width:var(--sidebar-w);height:100vh;background:var(--sidebar);color:#fff;display:flex;flex-direction:column;align-items:center;text-align:center;padding:40px 26px;overflow-y:auto;}
-        .sidebar .avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;display:block;border:3px solid rgba(255,255,255,0.18);margin-bottom:20px;}
-        .sidebar .name{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.5rem;line-height:1.2;margin:0 0 8px;color:#fff;}
-        .sidebar .tag{color:var(--sidebar-soft);font-size:0.78rem;white-space:nowrap;margin:0 0 14px;}
-        .sidebar .scholar{display:inline-block;color:#fff;font-size:0.9rem;font-weight:500;padding:6px 14px;border:1px solid var(--sidebar-line);border-radius:999px;margin-bottom:26px;}
-        .sidebar .scholar:hover{background:rgba(255,255,255,0.10);text-decoration:none;}
-        .sidebar nav{width:100%;border-top:1px solid var(--sidebar-line);padding-top:18px;}
-        .sidebar nav a{display:block;color:var(--sidebar-soft);font-size:0.98rem;font-weight:500;padding:9px 0;border-radius:6px;transition:color 0.15s ease;}
-        .sidebar nav a:hover{color:#fff;text-decoration:none;}
-        .sidebar nav a.active{color:var(--sidebar-active);font-weight:600;}
-        .content{margin-left:var(--sidebar-w);}
-        .page{padding:48px 0 24px;}
-        .page h1{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:clamp(2rem,5vw,2.8rem);line-height:1.12;margin:0 0 8px;letter-spacing:-0.01em;}
-        .status-line{color:var(--muted);font-size:0.95rem;margin:0 0 8px;}
-        .page h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.4rem;margin:34px 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line);}
-        .page p{color:#333;margin:0 0 16px;}
-        .figure{margin:24px 0;}
-        .figure img{width:100%;border-radius:12px;border:1px solid var(--line);display:block;}
-        .back-link{display:inline-block;margin-top:24px;font-weight:500;}
-        @media(max-width:900px){
-            :root{--sidebar-w:0px;}
-            .sidebar{position:static;width:100%;height:auto;flex-direction:column;padding:28px 26px;}
-            .sidebar nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 18px;}
-            .sidebar nav a{padding:6px 0;}
-            .content{margin-left:0;}
-        }
-    </style>
+    <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <aside class="sidebar">
         <a href="index.html"><img class="avatar" src="picture/william_profile_pic.jpg" alt="Portrait of Y. William Zheng"></a>
         <p class="name">Y. William Zheng</p>
-        <p class="tag">Undergraduate Student @ Cornell NBB</p>
-        <a class="scholar" href="https://scholar.google.com/" target="_blank" rel="noreferrer">Google Scholar</a>
-        <nav>
-            <a href="index.html#about">About</a>
-            <a class="active" href="index.html#projects">Research</a>
-            <a href="index.html#proposals">Proposals</a>
-            <a href="index.html#experience">Past Work</a>
+        <p class="tag">Neurobiology &amp; Behavior<br>Cornell University</p>
+        <nav aria-label="Main">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="publications.html">Publications</a>
+            <a href="research.html" aria-current="page">Research</a>
             <a href="index.html#contact">Contact</a>
         </nav>
+        <div class="side-links">
+            <a href="https://scholar.google.com/citations?user=ODMxjj0AAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a href="https://github.com/williamyixiangzheng" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="writing.html">Research Ideas</a>
+        </div>
     </aside>
 
     <div class="content">
-        <main class="page">
-            <div class="wrap">
-                <span class="status-line">Project Drift · Pre-print</span>
+        <main id="main" class="page">
+            <div class="wrap prose">
                 <h1>A hippocampal population code for rapid generalization</h1>
+                <p class="card-meta">
+                    Cornell University, 
+                    preprint on <a href="https://www.biorxiv.org/content/10.1101/2025.03.15.643456v1" target="_blank" rel="noreferrer">bioRxiv</a>,
+                </p>
+
+                <h2>Scientific question</h2>
+                <p>
+                    How does the hippocampus transform heterogeneous and dynamically changing single-neuron activity 
+                    into coherent population representations that distinguish individual experiences while generalizing 
+                    shared knowledge across them? This study asks whether spatial location, elapsed time and behavioral 
+                    choice are organized along separable population dimensions, how this organization emerges through 
+                    learning, and which circuit mechanisms govern spatial remapping and temporal representational drift.
+                </p>
 
                 <h2>Abstract</h2>
                 <p>
-                    Understanding how the heterogeneous activity patterns of individual neurons give rise to coherent population
-                    dynamics and cognition is a central challenge in neuroscience. In the hippocampus, neurons are tuned to
-                    spatial location, yet their activity is also modulated by multiple external and internal variables and
-                    exhibits apparent random drift over time, making it difficult to link hippocampal computations to behavior.
-                    By analyzing the population dynamics of large hippocampal ensembles in behaving mice, we reveal a structured
-                    organization underlying the diversity of single-neuron responses: the hippocampus encodes different aspects
-                    of experience as disentangled variables represented in the coactivity dynamics of cell assemblies. Using
-                    targeted circuit perturbations, we show that temporal and contextual components of this representation are
-                    governed by local inhibitory interactions and input-driven cell assembly dynamics, respectively. Our findings
-                    reveal the circuit basis of disentangled hippocampal representation, offering a unifying geometric principle
-                    of hippocampal coding that supports flexible and efficient memory representations.
+                    Understanding how the heterogeneous activity patterns of individual neurons give rise to coherent 
+                    population dynamics and cognition is a central challenge in neuroscience. In the hippocampus, neurons 
+                    are tuned to spatial location, yet their activity is also modulated by multiple external and internal 
+                    variables and exhibits apparent random drift over time, making it difficult to link hippocampal 
+                    computations to behavior. By analyzing the population dynamics of large hippocampal ensembles in 
+                    behaving mice, we reveal a structured organization underlying the diversity of single-neuron responses: 
+                    the hippocampus encodes different aspects of experience as disentangled variables represented in the 
+                    coactivity dynamics of cell assemblies. Using targeted circuit perturbations, we show that temporal a
+                    nd contextual components of this representation are governed by local inhibitory interactions and 
+                    input-driven cell assembly dynamics, respectively. Our findings reveal the circuit basis of disentangled 
+                    hippocampal representation, offering a unifying geometric principle of hippocampal coding that supports 
+                    flexible and efficient memory representations.
+                </p>
+                <p class="card-meta">
+                    updated abstract (differ from preprint)
                 </p>
 
-                <h2>Acknowledgment</h2>
-                <p>
-                    This project is led by Dr. Tang, W. and Hongyu Chang, under the supervision of Dr. Fernandez-Ruiz, A.
-                    and Dr. Oliva, A.
-                </p>
 
-                <h2>Figures</h2>
-                <figure class="figure">
-                    <img src="picture/sfn_2025_drift.png" alt="Project Drift figure from SfN 2025" loading="lazy">
+                <h2>Presentation</h2>
+                <figure>
+                    <img src="picture/sfn_2025_drift.png" alt="Poster presented at the 2025 Society for Neuroscience meeting, showing analyses of hippocampal population coding" loading="lazy">
+                    <figcaption>Poster presented at the Society for Neuroscience annual meeting, 2025.</figcaption>
                 </figure>
-                <figure class="figure">
-                    <img src="picture/sfn_drift_william.png" alt="William presenting Project Drift" loading="lazy">
+                <figure>
+                    <img src="picture/sfn_drift_william.png" alt="Y. William Zheng presenting the hippocampal population coding poster at the 2025 Society for Neuroscience meeting" loading="lazy">
                 </figure>
 
-                <p><a class="back-link" href="index.html#projects">&larr; Back to all projects</a></p>
+                <div class="row-links">
+                    <a href="https://www.biorxiv.org/content/10.1101/2025.03.15.643456v1" target="_blank" rel="noreferrer">Read the preprint</a>
+                    <a href="publications.html">Publications</a>
+                </div>
+
+                <p><a class="back-link" href="research.html">&larr; All research projects</a></p>
             </div>
         </main>
+
+        <footer>
+            <div class="wrap">
+                &copy; 2026 Y. William Zheng &middot; Research portfolio
+            </div>
+        </footer>
     </div>
 </body>
 </html>

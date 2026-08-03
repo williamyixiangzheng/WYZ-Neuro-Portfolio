@@ -4,165 +4,336 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research | Y. William Zheng</title>
-    <meta name="description" content="Research projects by Y. William Zheng in computational neuroscience, including Project Drift and Peking University research.">
-    <meta name="keywords" content="William Zheng, William Zheng Cornell, Y. William Zheng, neuroscience research, Project Drift, neural drift, Peking University, computational neuroscience">
+    <meta name="description" content="Research projects by Y. William Zheng on human single-neuron language encoding, hippocampal–prefrontal population dynamics, naturalistic spatial behavior, and long-term electrophysiology.">
     <meta name="author" content="Y. William Zheng">
+    <link rel="canonical" href="https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/research.html">
+    <meta property="og:title" content="Research | Y. William Zheng">
+    <meta property="og:description" content="Projects on human single-neuron language encoding, hippocampal–prefrontal population dynamics, naturalistic spatial behavior, and long-term electrophysiology.">
+    <meta property="og:url" content="https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/research.html">
+    <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet">
-    <style>
-        :root{--bg:#ffffff;--ink:#1a1a1a;--muted:#6b7280;--soft:#9ca3af;--line:#e7e7e7;--accent:#1f6feb;--sidebar:#15294d;--sidebar-soft:rgba(255,255,255,0.72);--sidebar-line:rgba(255,255,255,0.14);--sidebar-active:#ffd166;--sidebar-w:280px;--max:870px;}
-        *{box-sizing:border-box;}
-        html{scroll-behavior:smooth;overflow-y:scroll;}
-        body{margin:0;color:var(--ink);background:var(--bg);font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;font-size:16px;}
-        a{color:var(--accent);text-decoration:none;}
-        a:hover{text-decoration:underline;}
-        .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
-        .sidebar{position:fixed;top:0;left:0;width:var(--sidebar-w);height:100vh;background:var(--sidebar);color:#fff;display:flex;flex-direction:column;align-items:center;text-align:center;padding:40px 26px;overflow-y:auto;}
-        .sidebar .avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;display:block;border:3px solid rgba(255,255,255,0.18);margin-bottom:20px;}
-        .sidebar .name{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.5rem;line-height:1.2;margin:0 0 8px;color:#fff;}
-        .sidebar .tag{color:var(--sidebar-soft);font-size:0.78rem;white-space:nowrap;margin:0 0 14px;}
-        .sidebar .scholar{display:inline-block;color:#fff;font-size:0.9rem;font-weight:500;padding:6px 14px;border:1px solid var(--sidebar-line);border-radius:999px;margin-bottom:26px;}
-        .sidebar .scholar:hover{background:rgba(255,255,255,0.10);text-decoration:none;}
-        .sidebar nav{width:100%;border-top:1px solid var(--sidebar-line);padding-top:18px;}
-        .sidebar nav a{display:block;color:var(--sidebar-soft);font-size:0.98rem;font-weight:500;padding:9px 0;border-radius:6px;transition:color 0.15s ease;}
-        .sidebar nav a:hover{color:#fff;text-decoration:none;}
-        .sidebar nav a.active{color:var(--sidebar-active);font-weight:600;}
-        .content{margin-left:var(--sidebar-w);}
-        .page{padding:48px 0 24px;}
-        .page h1{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:clamp(2rem,5vw,2.8rem);line-height:1.12;margin:0 0 6px;letter-spacing:-0.01em;}
-        .lead{color:var(--muted);font-size:1.02rem;margin:0 0 16px;}
-        h2.section-title{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.5rem;margin:30px 0 4px;padding-bottom:10px;border-bottom:1px solid var(--line);}
-        .item{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:24px 0;border-bottom:1px solid var(--line);align-items:start;}
-        .item:last-child{border-bottom:none;}
-        .item .thumb{width:150px;height:110px;object-fit:cover;border-radius:8px;border:1px solid var(--line);background:#f3f4f6;}
-        .item .meta{display:inline-block;font-size:0.78rem;font-weight:600;letter-spacing:0.03em;text-transform:uppercase;color:var(--soft);margin-bottom:4px;}
-        .item h3{margin:2px 0 6px;font-size:1.1rem;font-weight:600;line-height:1.35;}
-        .item h3 a{color:var(--ink);}
-        .item h3 a:hover{color:var(--accent);}
-        .status{display:inline-block;font-size:0.82rem;color:var(--muted);margin-bottom:8px;}
-        .status::before{content:"•  ";color:var(--soft);}
-        .item p{margin:0 0 10px;color:#444;font-size:0.97rem;}
-        .item .row-links{display:flex;flex-wrap:wrap;gap:16px;font-size:0.9rem;font-weight:500;}
-        .skills{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);}
-        .skills p{margin:0 0 6px;font-size:0.9rem;color:var(--muted);}
-        .back-link{display:inline-block;margin-top:24px;font-weight:500;}
-        @media(max-width:900px){
-            :root{--sidebar-w:0px;}
-            .sidebar{position:static;width:100%;height:auto;flex-direction:column;padding:28px 26px;}
-            .sidebar nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 18px;}
-            .sidebar nav a{padding:6px 0;}
-            .content{margin-left:0;}
-        }
-        @media(max-width:560px){.item{grid-template-columns:1fr;}.item .thumb{width:100%;height:180px;}}
-    </style>
+    <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <aside class="sidebar">
         <a href="index.html"><img class="avatar" src="picture/william_profile_pic.jpg" alt="Portrait of Y. William Zheng"></a>
         <p class="name">Y. William Zheng</p>
-        <p class="tag">Undergraduate Student @ Cornell NBB</p>
-        <a class="scholar" href="https://scholar.google.com/" target="_blank" rel="noreferrer">Google Scholar</a>
-        <nav>
-            <a href="index.html#about">About</a>
-            <a class="active" href="index.html#projects">Research</a>
-            <a href="index.html#proposals">Proposals</a>
-            <a href="index.html#experience">Past Work</a>
+        <p class="tag">Department of Neurobiology &amp; Behavior<br>Cornell University</p>
+        <nav aria-label="Main">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="publications.html">Publications</a>
+            <a href="research.html" aria-current="page">Research</a>
             <a href="index.html#contact">Contact</a>
         </nav>
+        <div class="side-links">
+            <a href="https://scholar.google.com/citations?user=ODMxjj0AAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a href="https://github.com/williamyixiangzheng" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="writing.html">Research Ideas</a>
+        </div>
     </aside>
 
     <div class="content">
-        <main class="page">
+        <main id="main" class="page">
             <div class="wrap">
                 <h1>Research</h1>
-                <p class="lead">Current research directions across hippocampal coding, social territory, and neural devices.</p>
 
-                <h2 class="section-title">Main Projects</h2>
+                <h2>Published work</h2>
 
-                <article id="project-drift" class="item">
-                    <img class="thumb" src="picture/sfn_2025_drift.png" alt="Project Drift">
-                    <div>
-                        <span class="meta">Project Drift</span>
+                <article id="drift" class="card">
+                    <div class="card-head">
                         <h3><a href="Project_Drift.html">A hippocampal population code for rapid generalization</a></h3>
-                        <span class="status">Pre-print</span>
-                        <p>
-                            CA1 population activity uses a disentangled code for location, time, and choice, while CA3,
-                            MEC, and local PV-interneurons shape remapping and representational drift.
-                        </p>
-                        <div class="row-links">
-                            <a href="Project_Drift.html">Project page</a>
-                            <a href="https://www.biorxiv.org/content/10.1101/2025.03.15.643456v1" target="_blank" rel="noreferrer">Preprint</a>
-                        </div>
-                        <div class="skills">
-                            <p>• Mouse behavioral tasks, Arduino coding, optogenetic fiber surgery, perfusion, and imaging.</p>
-                            <p>• Topological data analysis, dimensionality reduction, and hippocampal neural manifold analysis across familiar vs. unfamiliar tracks and long-term (~300-day) recordings with flexible probes.</p>
-                        </div>
+                    </div>
+                    <p class="card-byline">
+                        <span class="venue">bioRxiv (2025), Under review, Cornell University</span>
+                        <span class="authors">
+                            Tang, W.<span class="eq">*</span>, Chang, H.<span class="eq">*</span>, Liu, C.,
+                            Perez-Hernandez, S., <span class="me">Zheng, Y. W.</span>, Park, J., Oliva, A.,
+                            Fern&aacute;ndez-Ruiz, A.
+                        </span>
+                        <span class="venue">* Equal contribution</span>
+                    </p>
+
+                    <h4>Question</h4>
+                    <p>
+                       How does the hippocampus organize heterogeneous and dynamic single-neuron activity 
+                       into coherent population representations that both distinguish individual experiences 
+                       and support rapid generalization? Individual hippocampal neurons often exhibit mixed 
+                       selectivity and changing activity over time, making it unclear how stable memory 
+                       representations emerge at the population level. This study investigates how hippocampal 
+                       circuits construct representations that preserve the uniqueness of individual experiences 
+                       while extracting shared structure that enables rapid and flexible generalization.
+                    </p>
+
+                    <h4>Why it matters</h4>
+                    <p>
+                        Memory requires balancing two competing demands: maintaining the details that distinguish 
+                        individual experiences while identifying relationships that can be applied to new situations. 
+                        Understanding how hippocampal population activity achieves this balance provides insight into 
+                        the neural computations underlying learning, memory organization, and flexible behavior.
+                    </p>
+
+                    <h4>Findings</h4>
+                    <p>
+                        The study found that hippocampal population activity forms structured,
+                        low-dimensional representations that capture relationships across related
+                        experiences. These population codes support generalization from limited
+                        experience, suggesting that the hippocampus builds abstract relational
+                        representations that can guide behavior in new situations.
+                    </p>
+
+                    <div class="row-links">
+                        <a href="Project_Drift.html">Project page</a>
+                        <a href="https://www.biorxiv.org/content/10.1101/2025.03.15.643456v1" target="_blank" rel="noreferrer">Preprint (bioRxiv)</a>
                     </div>
                 </article>
 
-                <article id="project-territory" class="item">
-                    <img class="thumb" src="picture/territory_setup.png" alt="Project Territory">
-                    <div>
-                        <span class="meta">Project Territory</span>
+                <h2>Current research</h2>
+
+                <article id="language" class="card">
+                    <div class="card-head">
+                        <h3>Temporal and laminar organization of linguistic feature encoding in human single neurons</h3>
+                    </div>
+                    <p class="card-byline">
+                        <span class="venue">Manuscript in prep., Harvard Medical School &amp; Massachusetts General Hospital</span>
+                        <span class="authors">
+                            Hardstone, R., Munoz, W., &hellip;, <span class="me">Zheng, Y. W.</span>,
+                            &hellip;, Williams, Z. (2026).
+                        </span>
+                    </p>
+
+                    <h4>Question</h4>
+                    <p>
+                        How does the human brain transform linguistic knowledge into speech? We investigate 
+                        which phonetic, syntactic, semantic, and behavioral features predict single-neuron 
+                        activity, how strongly they modulate firing, and how their encoding and modulation 
+                        are organized across time, cortical layers, and neural populations.
+                    </p>
+
+                    <h4>Why it matters</h4>
+                    <p>
+                        Distinguishing predictive encoding from firing-rate modulation is essential for understanding 
+                        how linguistic representations are converted into spoken behavior. Revealing their temporal 
+                        and laminar organization may also inform speech neuroprostheses and brain-computer interfaces.
+                    </p>
+
+                    <h4>Current progress</h4>
+                    <p>
+                        We are combining cross-validated single-neuron GLMs with population-level firing-modulation 
+                        analyses to determine which linguistic and behavioral features predict neural activity, how 
+                        strongly they alter firing rates, and how these effects vary across participants, temporal offsets, 
+                        cortical layers, and feature families.
+                    </p>
+
+                </article>
+
+                <article id="thesis" class="card">
+                    <div class="card-head">
+                        <h3>Topological evolution of hippocampal&ndash;prefrontal manifolds during long-term spatial memory consolidation</h3>
+                    </div>
+                    <p class="card-byline">
+                        <span class="venue">Ongoing project, Undergraduate honors thesis, Cornell University</span>
+                        <span class="authors">
+                            <span class="me">Zheng, Y. W.</span>, Park, J., Fernández-Ruiz, A., Oliva, A. (2026).
+                        </span>
+                    </p>
+
+                    <h4>Question</h4>
+                    <p>
+                        How do hippocampal and prefrontal population representations transform as isolated 
+                        spatial experiences are progressively integrated into a coherent long-term memory? 
+                        Specifically, how are local route representations geometrically aligned, stabilized, 
+                        and reorganized into a global cognitive map across extended learning?
+                    </p>
+
+                    <h4>Why it matters</h4>
+                    <p>
+                        Long-term memory requires more than preserving individual experiences; the brain 
+                        connects related experiences into structured representations that support flexible recall, 
+                        planning, and generalization. Identifying how hippocampal-prefrontal neural 
+                        manifolds evolve and align over time may reveal the population-level mechanisms through 
+                        which transient spatial representations become stable cortical schemas.
+                    </p>
+
+                    <h4>Current progress</h4>
+                    <p>
+                        We are developing manifold-learning, representational-alignment, decoding,
+                        and topological analyses to quantify how hippocampal-prefrontal population
+                        representations evolve across routes, learning stages, and extended
+                        experience.
+                    </p>
+
+                </article>
+
+                <article id="territory" class="card">
+                    <div class="card-head">
                         <h3><a href="Project_Fieldwork.html">A socio-spatial cognitive map of a naturalistic environment</a></h3>
-                        <span class="status">In prep / unpublished manuscript</span>
-                        <p>
-                            Male mice in a semi-natural outdoor enclosure, studying how hippocampal place-cell activity
-                            evolves during territory formation, defense, and intrusion.
-                        </p>
-                        <div class="row-links">
-                            <a href="Project_Fieldwork.html">Project page</a>
-                        </div>
-                        <div class="skills">
-                            <p>• Neuropixels silicon-probe surgeries and naturalistic outdoor behavioral tasks using wireless neuro-datalogger setups.</p>
-                            <p>• 3D-printed headstages and automated pipelines for multi-animal identity tracking (trajectory + IMU, PCB/CE32 console recordings).</p>
-                            <p>• Spike sorting, DeepLabCut, YOLO, sharp-wave-ripple detection, place-cell metrics, theta sweeps, and neural manifold topology.</p>
-                        </div>
+                    </div>
+                    <p class="card-byline">
+                        <span class="venue">Manuscript in prep., Cornell University</span>
+                        <span class="authors">
+                            Paudel, P., Zhao, Z., Ryan, J., <span class="me">Zheng, Y. W.</span>, Yu, A., Niraula, R., Zhao, E., 
+                            Mei, X., Shen, J., Fernandez-Ruiz, A., and Oliva, A. (2026). 
+                        </span>
+                    </p>
+
+                    <h4>Question</h4>
+                    <p>
+                        How does the hippocampus construct spatial and social cognitive maps to guide 
+                        flexible behavior in natural environments? Animals form territories, navigate 
+                        to behaviorally relevant locations and adapt to other individuals, but how 
+                        these experiences are represented in hippocampal-prefrontal circuits remains unclear.
+                    </p>
+
+                    <h4>Why it matters</h4>
+                    <p>
+                        Cognitive maps are thought to organize knowledge beyond physical space, yet their 
+                        role in natural social behavior remains poorly understood. Determining how hippocampal 
+                        activity integrates location, social context and prior experience, and how these 
+                        representations are reinstated during offline periods, could reveal how memory supports 
+                        territorial organization, homing and adaptive social behavior.
+                    </p>
+
+                    <h4>Current progress</h4>
+                    <p>
+                        We are using large-scale wireless neural recordings with automated
+                        multi-animal identity tracking to relate hippocampal and cortical population
+                        activity to spatial behavior, social interactions, and their integration
+                        during naturalistic behavior.
+                    </p>
+
+
+                    <div class="row-links"><a href="Project_Fieldwork.html">Project page</a></div>
+                </article>
+
+                <article id="probes" class="card">
+                    <div class="card-head">
+                        <h3><a href="Project_Fabrication.html">Long-term, large-scale neural recordings across memory circuits with high-density flexible probes</a></h3>
+                    </div>
+                    <p class="card-byline">
+                        <span class="venue">Manuscript in prep., Cornell University</span>
+                        <span class="authors">
+                            Park, J., Zhao, Z., Karaba, L., Perez-Hernandez, S., <span class="me">Zheng, Y. W.</span>, Kwon, A., Oliva, A., and Fernandez-Ruiz, A. (2026).  
+                        </span>
+                    </p>
+
+                    <h4>Question</h4>
+                    <p>
+                        How can the same neurons and their representations be tracked across the timescales 
+                        of long-term learning and memory? Flexible neural interfaces may overcome the mechanical 
+                        instability and tissue responses that limit chronic recordings while preserving the 
+                        temporal resolution required to resolve single-cell and circuit dynamics.
+                    </p>
+
+                    <h4>Why it matters</h4>
+                    <p>
+                        Understanding whether individual neurons and cell assemblies remain stable or reorganize 
+                        over time requires recordings that distinguish biological change from electrode drift 
+                        and recording instability. Long-term, high-density recordings across the hippocampus and 
+                        prefrontal cortex could reveal how spatial representations and distributed memory circuits 
+                        evolve over weeks to months.
+                    </p>
+
+                    <h4>Current progress</h4>
+                    <p>
+                        We are developing and validating flexible, high-density neural probes for chronic recordings 
+                        across the hippocampus and prefrontal cortex. Ongoing work combines probe fabrication, 
+                        longitudinal unit tracking, spatial firing analysis and histological assessment to evaluate 
+                        recording yield, single-neuron stability and representational consistency over weeks to months, 
+                        with comparisons to conventional rigid probes.
+                    </p>
+
+
+                    <div class="row-links"><a href="Project_Fabrication.html">Project page</a></div>
+                </article>
+
+                <h2>Earlier research</h2>
+
+                <article id="huntington" class="card">
+                    <div class="card-head">
+                        <h3><a href="Research_In_Peking_University.html">Muscle atrophy and gene-therapy research in Huntington's disease</a></h3>
+                    </div>
+                    <p class="card-byline">
+                        <span class="venue"><em>Science Advances</em> (2026), non-author contribution, Peking University</span>
+                        <span class="venue">Dai, Y., Abudujielili, Z., Ding, Y., Huang, W., Yin, J., Ou, L., Hu, J., Zheng, S., & Li, C. (2026).</span>
+                    </p>
+
+                    <h4>Question</h4>
+                    <p>
+                        Can CRISPR-mediated elimination of mutant huntingtin produce durable therapeutic 
+                        benefits when delivered before or after the onset of Huntington’s disease? A central 
+                        challenge is whether permanent gene editing can suppress disease progression across 
+                        clinically relevant stages while limiting the risks associated with prolonged Cas9 activity.
+                    </p>
+
+                    <h4>Why it matters</h4>
+                    <p>
+                        Huntington’s disease is caused by a toxic gain-of-function mutation in <em>HTT</em>, making the 
+                        mutant gene a direct therapeutic target. Establishing whether a single intervention can 
+                        provide sustained benefit after pathology and behavioral deficits have emerged, while 
+                        minimizing off-target editing, is critical for translating genome editing into a viable treatment.
+                    </p>
+
+                    <h4>Findings</h4>
+                    <p>
+                        The study developed an AAV-delivered, self-inactivating CRISPR-Cas9 system that transiently expressed 
+                        Cas9 while permanently disrupting human mutant <em>HTT</em>. A single treatment substantially reduced mutant
+                         huntingtin protein and aggregates and produced lasting improvements in neuropathology, motor function, 
+                         body weight and survival in BAC226Q mice. Benefits were observed when treatment was delivered before, 
+                         near or well after disease onset, providing preclinical evidence that durable mutant-<em>HTT</em> editing may 
+                         remain effective across different stages of disease progression.
+                    </p>
+
+                    <div class="row-links">
+                        <a href="Research_In_Peking_University.html">Experience page</a>
+                        <a href="https://www.science.org/doi/10.1126/sciadv.aea8052" target="_blank" rel="noreferrer">Associated publication</a>
                     </div>
                 </article>
 
-                <article id="project-fabrication" class="item">
-                    <img class="thumb" src="picture/sfn_drift_william.png" alt="Project Fabrication">
-                    <div>
-                        <span class="meta">Project Fabrication</span>
-                        <h3><a href="Project_Fabrication.html">Long-term neural recordings across memory circuits with high-density flexible probes</a></h3>
-                        <span class="status">In prep / unpublished manuscript</span>
-                        <p>
-                            Polymer-based flexible thin-film probes to reduce tissue–device mismatch and support stable
-                            long-term single-neuron tracking across memory circuits.
-                        </p>
-                        <div class="row-links">
-                            <a href="Project_Fabrication.html">Project page</a>
-                        </div>
-                        <div class="skills">
-                            <p>• Large-scale hippocampal electrophysiology in behaving mice across environments; experimental design with Arduino, DLC, perfusions, and imaging.</p>
-                            <p>• Population-dynamics analysis from high-dimensional data; single-cell place-cell stability across ~300-day recordings via spike sorting.</p>
-                        </div>
+                <article id="drosophila" class="card">
+                    <div class="card-head">
+                        <h3><em>Drosophila</em> O-GlcNAc transferase research</h3>
                     </div>
-                </article>
+                    <p class="card-byline">
+                        <span class="venue">Peking University</span>
+                    </p>
 
-                <h2 class="section-title">Earlier Experience</h2>
+                    <h4>Question</h4>
+                    <p>
+                        How does altered O-GlcNAc transferase function affect development,
+                        physiology, and behavior in <em>Drosophila</em>? This work used genetic
+                        crosses and behavioral phenotyping to investigate how changes in a conserved
+                        post-translational regulatory pathway influence organism-level traits.
+                    </p>
 
-                <article id="peking-university" class="item">
-                    <img class="thumb" src="picture/pek_brain_slice.JPG" alt="Peking University research">
-                    <div>
-                        <span class="meta">Peking University</span>
-                        <h3><a href="Research_In_Peking_University.html">Molecular neuroscience work related to Huntington's disease</a></h3>
-                        <p>
-                            Before shifting into computational and systems neuroscience, I worked on Huntington's
-                            disease research using the CRISPR system in <a href="https://web.bio.pku.edu.cn/UHPB/index.php?m=Index&amp;a=teacher_cont&amp;id=86&amp;cid=20" target="_blank" rel="noreferrer" style="text-decoration: underline;">Dr. Chenjian Li's lab</a> at Peking University.
-                        </p>
-                        <div class="row-links">
-                            <a href="Research_In_Peking_University.html">Experience page</a>
-                            <a href="https://www.science.org/doi/10.1126/sciadv.aea8052" target="_blank" rel="noreferrer">Publication</a>
-                        </div>
-                    </div>
+                    <h4>Why it matters</h4>
+                    <p>
+                        O-GlcNAcylation regulates many cellular processes, but connecting molecular
+                        perturbations to behavioral and developmental phenotypes requires tractable
+                        in vivo models. 
+                    </p>
+
+                    <h4>Findings</h4>
+                    <p>
+                        This early-stage project involved phenotype screening and behavioral assays
+                        to identify candidate variants for further genetic analysis.
+                    </p>
+
                 </article>
 
                 <p><a class="back-link" href="index.html">&larr; Back to home</a></p>
             </div>
         </main>
+
+        <footer>
+            <div class="wrap">
+                &copy; 2026 Y. William Zheng &middot; Research portfolio
+            </div>
+        </footer>
     </div>
 </body>
 </html>

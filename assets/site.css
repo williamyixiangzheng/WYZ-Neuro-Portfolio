@@ -1,0 +1,529 @@
+/* ==========================================================================
+   Y. William Zheng — research portfolio
+   Shared stylesheet. Every page links this file; no page defines its own
+   colours, spacing, or nav styles.
+   ========================================================================== */
+
+:root {
+    --bg: #ffffff;
+    --ink: #1a1a1a;
+    --body: #333333;
+    --muted: #5b6472;
+    --soft: #6b7280;
+    --line: #e4e6ea;
+    --line-soft: #f0f1f4;
+    --accent: #1450b4;
+    --accent-dark: #0f3d8a;
+    --sidebar: #15294d;
+    --sidebar-soft: rgba(255, 255, 255, 0.82);
+    --sidebar-line: rgba(255, 255, 255, 0.16);
+    --sidebar-active: #ffd166;
+    --sidebar-w: 280px;
+    --max: 900px;
+    --focus: #b45309;
+}
+
+* { box-sizing: border-box; }
+
+html {
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--bg);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.65;
+    font-size: 17px;
+    overflow-wrap: break-word;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Visible keyboard focus everywhere, including inside the dark sidebar. */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: 3px;
+}
+.sidebar a:focus-visible { outline-color: var(--sidebar-active); }
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    background: #fff;
+    color: var(--accent);
+    padding: 10px 16px;
+    font-weight: 600;
+}
+.skip-link:focus { left: 8px; top: 8px; }
+
+.wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-w);
+    height: 100vh;
+    background: var(--sidebar);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 26px;
+    overflow-y: auto;
+}
+
+.sidebar .avatar {
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 3px solid rgba(255, 255, 255, 0.18);
+    margin-bottom: 18px;
+}
+
+.sidebar .name {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.45rem;
+    line-height: 1.2;
+    margin: 0 0 6px;
+    color: #fff;
+}
+
+.sidebar .tag {
+    color: var(--sidebar-soft);
+    font-size: 0.8rem;
+    line-height: 1.45;
+    margin: 0 0 20px;
+}
+
+.sidebar nav {
+    width: 100%;
+    border-top: 1px solid var(--sidebar-line);
+    padding-top: 16px;
+}
+
+.sidebar nav a {
+    display: block;
+    color: var(--sidebar-soft);
+    font-size: 0.97rem;
+    font-weight: 500;
+    padding: 8px 0;
+    border-radius: 6px;
+}
+.sidebar nav a:hover { color: #fff; text-decoration: none; }
+.sidebar nav a[aria-current="page"] {
+    color: var(--sidebar-active);
+    font-weight: 600;
+}
+
+.sidebar .side-links {
+    width: 100%;
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid var(--sidebar-line);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.sidebar .side-links a {
+    color: var(--sidebar-soft);
+    font-size: 0.87rem;
+}
+.sidebar .side-links a:hover { color: #fff; }
+
+.content { margin-left: var(--sidebar-w); }
+
+/* ---------- Page furniture ---------- */
+.page { padding: 52px 0 24px; }
+
+h1 {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2rem, 5vw, 2.7rem);
+    line-height: 1.12;
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+}
+
+.lead {
+    color: var(--muted);
+    font-size: 1.05rem;
+    margin: 0 0 8px;
+}
+
+h2 {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 44px 0 6px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+}
+
+h3 {
+    font-size: 1.14rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin: 2px 0 8px;
+}
+h3 a { color: var(--ink); }
+h3 a:hover { color: var(--accent); }
+
+h4 {
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--soft);
+    margin: 18px 0 6px;
+}
+
+p { color: var(--body); margin: 0 0 16px; }
+
+.prose li { color: var(--body); margin-bottom: 6px; }
+.prose ul, .prose ol { padding-left: 22px; margin: 0 0 16px; }
+
+/* ---------- Hero (home) ---------- */
+.hero { padding: 56px 0 0; }
+.hero h1 { margin-bottom: 14px; }
+.hero .role {
+    font-size: 1.12rem;
+    color: var(--ink);
+    margin: 0 0 14px;
+}
+.hero .affil { color: var(--muted); font-size: 1rem; }
+
+.hero-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+.hero-links a {
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 7px 15px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--accent);
+}
+.hero-links a:hover {
+    text-decoration: none;
+    border-color: var(--accent);
+    background: #f5f8fe;
+}
+
+/* ---------- Status pills ---------- */
+.pill {
+    display: inline-block;
+    font-size: 0.71rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+    background: #eef1f6;
+    color: #3c4757;
+}
+.pill--published { background: #e2f0e4; color: #245c30; }
+.pill--preprint  { background: #dfeaf9; color: #17427e; }
+.pill--review    { background: #dfeaf9; color: #17427e; }
+.pill--prep      { background: #fdf0d9; color: #7a5a11; }
+.pill--ongoing   { background: #ece6f7; color: #4a3579; }
+.pill--earlier   { background: #eef1f6; color: #3c4757; }
+.pill--concept   { background: #f4eee8; color: #6b4a2c; }
+
+/* ---------- Project cards ---------- */
+.card {
+    padding: 26px 0;
+    border-bottom: 1px solid var(--line);
+}
+.card:last-of-type { border-bottom: none; }
+
+.card-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 2px;
+}
+.card-head h3 { margin: 0; }
+
+.card-meta {
+    font-size: 0.86rem;
+    color: var(--soft);
+    margin: 0 0 10px;
+}
+
+/* Card header: output type, then venue/status, then the author line.
+   The project title stays the visual anchor; this is supporting context. */
+.card-byline { margin: 0 0 14px; }
+
+.card-byline .kind {
+    display: block;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--soft);
+    margin-bottom: 1px;
+}
+
+.card-byline .venue {
+    display: block;
+    font-size: 0.88rem;
+    color: var(--muted);
+}
+
+.card-byline .authors {
+    display: block;
+    font-size: 0.86rem;
+    line-height: 1.5;
+    color: var(--muted);
+    margin-top: 5px;
+}
+/* The portfolio owner, emphasised within the author list. */
+.card-byline .authors .me { font-weight: 700; color: var(--ink); }
+
+/* Marks equal contribution; explained by .eq-note under the list. */
+.card-byline .authors .eq { font-weight: 400; }
+
+.eq-note {
+    font-size: 0.79rem;
+    color: var(--soft);
+    margin-top: 3px;
+}
+
+.card p { margin: 0 0 12px; font-size: 0.98rem; }
+
+.card ul {
+    margin: 0 0 12px;
+    padding-left: 20px;
+}
+.card li {
+    color: var(--body);
+    font-size: 0.96rem;
+    margin-bottom: 5px;
+}
+
+/* Home featured cards: two side-by-side columns, collapsing to one on narrow
+   screens. Reading order is left-to-right, then down. */
+.featured {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 0 36px;
+}
+.featured .card { border-bottom: 1px solid var(--line-soft); }
+
+/* The homepage shows at most six featured projects; anything beyond the sixth
+   belongs on the Research page. Keep the markup to six cards -- this rule is a
+   guard, and hidden cards are still in the DOM for crawlers and screen readers. */
+.featured .card:nth-child(n + 7) { display: none; }
+
+/* Underlined body text. Offset so descenders stay legible. */
+.underlined {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+/* ---------- Method tags ---------- */
+.tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0 0 12px;
+    padding: 0;
+}
+.tags li {
+    font-size: 0.78rem;
+    color: var(--muted);
+    background: #f5f6f8;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 2px 8px;
+    margin: 0;
+    max-width: none;
+}
+
+/* ---------- Link rows ---------- */
+.row-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    font-size: 0.92rem;
+    font-weight: 500;
+}
+
+.back-link { display: inline-block; margin-top: 32px; font-weight: 500; }
+
+/* ---------- Figures ---------- */
+figure { margin: 24px 0; }
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    display: block;
+}
+figcaption {
+    font-size: 0.86rem;
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+/* ---------- Pipeline diagram (original asset, no data shown) ---------- */
+.pipeline {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 8px;
+    margin: 20px 0 24px;
+    padding: 0;
+}
+.pipeline li {
+    flex: 1 1 130px;
+    font-size: 0.82rem;
+    line-height: 1.4;
+    color: var(--muted);
+    background: #f7f8fa;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin: 0;
+    max-width: none;
+    position: relative;
+}
+.pipeline li strong {
+    display: block;
+    color: var(--ink);
+    font-size: 0.86rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+/* ---------- Callout ---------- */
+.note {
+    border-left: 3px solid var(--line);
+    padding: 2px 0 2px 16px;
+    margin: 20px 0;
+    color: var(--muted);
+    font-size: 0.94rem;
+}
+.note p { color: inherit; font-size: inherit; margin-bottom: 8px; }
+.note p:last-child { margin-bottom: 0; }
+
+/* Technologies / methods line closing a software entry. */
+.tech {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-top: 14px;
+}
+.tech span {
+    font-weight: 600;
+    color: var(--ink);
+}
+
+/* ---------- Publication list ----------
+   Formal, compact citation entries for the Publications page. Deliberately
+   not cards: no borders, icons, or thumbnails, so the page reads like the
+   publications section of an academic CV. */
+.pubs {
+    list-style: none;
+    margin: 0 0 8px;
+    padding: 0;
+}
+
+.pub {
+    margin: 0 0 22px;
+    padding-left: 22px;
+    text-indent: -22px;   /* hanging indent, as in a printed reference list */
+    max-width: none;
+}
+.pub:last-child { margin-bottom: 0; }
+
+.pub-line {
+    margin: 0;
+    font-size: 0.97rem;
+    line-height: 1.6;
+    color: var(--body);
+}
+/* Author list wraps cleanly on narrow screens rather than overflowing. */
+.pub-line .me { font-weight: 700; color: var(--ink); }
+
+.pub-note {
+    display: block;
+    text-indent: 0;
+    margin-top: 5px;
+    font-size: 0.86rem;
+    color: var(--muted);
+}
+.pub-note a { font-weight: 500; }
+
+/* ---------- Citations ---------- */
+.citation {
+    font-size: 0.96rem;
+    color: var(--body);
+    margin: 0 0 8px;
+}
+.citation .me { font-weight: 700; }
+
+/* ---------- Footer ---------- */
+footer {
+    margin-top: 56px;
+    padding: 22px 0 56px;
+    border-top: 1px solid var(--line);
+    color: var(--soft);
+    font-size: 0.87rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    :root { --sidebar-w: 0px; }
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 26px 24px;
+    }
+    .sidebar .avatar { width: 104px; height: 104px; }
+    .sidebar nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2px 18px;
+    }
+    .sidebar nav a { padding: 6px 0; }
+    .sidebar .side-links { flex-direction: row; justify-content: center; gap: 18px; }
+    .content { margin-left: 0; }
+    .page { padding: 34px 0 16px; }
+    .hero { padding: 34px 0 0; }
+}
+
+@media (max-width: 560px) {
+    body { font-size: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+}

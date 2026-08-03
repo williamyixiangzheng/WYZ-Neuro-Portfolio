@@ -3,66 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="William Zheng, William Zheng Cornell, Y. William Zheng, Project Fieldwork, neuroscience, computational neuroscience">
-    <title>Project Territory — Coming Soon | Y. William Zheng</title>
+    <title>A socio-spatial cognitive map of a naturalistic environment | Y. William Zheng</title>
+    <meta name="description" content="Ongoing Cornell research by Y. William Zheng using Neuropixels recordings and multi-animal tracking to study hippocampal representations of space and social interaction in a naturalistic environment.">
+    <meta name="author" content="Y. William Zheng">
+    <link rel="canonical" href="https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/Project_Fieldwork.html">
+    <meta property="og:title" content="A socio-spatial cognitive map of a naturalistic environment">
+    <meta property="og:description" content="Neuropixels recordings and multi-animal tracking in a naturalistic multi-animal environment.">
+    <meta property="og:url" content="https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/Project_Fieldwork.html">
+    <meta property="og:type" content="article">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet">
-    <style>
-        :root{--bg:#ffffff;--ink:#1a1a1a;--muted:#6b7280;--soft:#9ca3af;--line:#e7e7e7;--accent:#1f6feb;--sidebar:#15294d;--sidebar-soft:rgba(255,255,255,0.72);--sidebar-line:rgba(255,255,255,0.14);--sidebar-active:#ffd166;--sidebar-w:280px;}
-        *{box-sizing:border-box;}
-        html{overflow-y:scroll;}
-        body{margin:0;color:var(--ink);background:var(--bg);font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;font-size:16px;}
-        a{color:var(--accent);text-decoration:none;}
-        a:hover{text-decoration:underline;}
-        .sidebar{position:fixed;top:0;left:0;width:var(--sidebar-w);height:100vh;background:var(--sidebar);color:#fff;display:flex;flex-direction:column;align-items:center;text-align:center;padding:40px 26px;overflow-y:auto;}
-        .sidebar .avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;display:block;border:3px solid rgba(255,255,255,0.18);margin-bottom:20px;}
-        .sidebar .name{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.5rem;line-height:1.2;margin:0 0 8px;color:#fff;}
-        .sidebar .tag{color:var(--sidebar-soft);font-size:0.78rem;white-space:nowrap;margin:0 0 14px;}
-        .sidebar .scholar{display:inline-block;color:#fff;font-size:0.9rem;font-weight:500;padding:6px 14px;border:1px solid var(--sidebar-line);border-radius:999px;margin-bottom:26px;}
-        .sidebar .scholar:hover{background:rgba(255,255,255,0.10);text-decoration:none;}
-        .sidebar nav{width:100%;border-top:1px solid var(--sidebar-line);padding-top:18px;}
-        .sidebar nav a{display:block;color:var(--sidebar-soft);font-size:0.98rem;font-weight:500;padding:9px 0;border-radius:6px;transition:color 0.15s ease;}
-        .sidebar nav a:hover{color:#fff;text-decoration:none;}
-        .sidebar nav a.active{color:var(--sidebar-active);font-weight:600;}
-        .content{margin-left:var(--sidebar-w);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:60px 24px;}
-        .soon{max-width:480px;text-align:center;}
-        .badge-soon{display:inline-block;background:#fff4d6;color:#8a6d1a;font-size:0.78rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:16px;}
-        .soon h1{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:2.2rem;margin:0 0 12px;}
-        .soon p{color:var(--muted);margin:0 0 24px;}
-        .back-btn{display:inline-block;background:var(--sidebar);color:#fff;font-weight:500;font-size:0.92rem;padding:10px 20px;border-radius:999px;}
-        .back-btn:hover{background:#1d3666;text-decoration:none;color:#fff;}
-        @media(max-width:900px){
-            :root{--sidebar-w:0px;}
-            .sidebar{position:static;width:100%;height:auto;flex-direction:column;padding:28px 26px;}
-            .sidebar nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 18px;}
-            .sidebar nav a{padding:6px 0;}
-            .content{margin-left:0;min-height:auto;padding:60px 24px;}
-        }
-    </style>
+    <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <aside class="sidebar">
         <a href="index.html"><img class="avatar" src="picture/william_profile_pic.jpg" alt="Portrait of Y. William Zheng"></a>
         <p class="name">Y. William Zheng</p>
-        <p class="tag">Undergraduate Student @ Cornell NBB</p>
-        <a class="scholar" href="https://scholar.google.com/" target="_blank" rel="noreferrer">Google Scholar</a>
-        <nav>
-            <a href="index.html#about">About</a>
-            <a class="active" href="index.html#projects">Research</a>
-            <a href="index.html#proposals">Proposals</a>
-            <a href="index.html#experience">Past Work</a>
+        <p class="tag">Neurobiology &amp; Behavior<br>Cornell University</p>
+        <nav aria-label="Main">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="publications.html">Publications</a>
+            <a href="research.html" aria-current="page">Research</a>
             <a href="index.html#contact">Contact</a>
         </nav>
+        <div class="side-links">
+            <a href="https://scholar.google.com/citations?user=ODMxjj0AAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a href="https://github.com/williamyixiangzheng" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="writing.html">Research Ideas</a>
+        </div>
     </aside>
 
     <div class="content">
-        <div class="soon">
-            <span class="badge-soon">Coming Soon</span>
-            <h1>Project Territory</h1>
-            <p>This project page is currently under construction and not yet available to the public. Please check back later for updates.</p>
-            <a class="back-btn" href="index.html#projects">&larr; Back to projects</a>
-        </div>
+        <main id="main" class="page">
+            <div class="wrap prose">
+                <h1>A socio-spatial cognitive map of a naturalistic environment</h1>
+                <p class="card-meta">
+                    Cornell University, manuscript in prep.
+                </p>
+
+                <h2>Scientific question</h2>
+                <p>
+                    How does the hippocampus integrate spatial and social information to organize territorial 
+                    behavior in natural environments? Animals must establish home ranges, monitor conspecifics, 
+                    patrol boundaries and respond to intruders, yet how hippocampal representations use environmental 
+                    and social cues to guide these behaviors remains unclear.
+                </p>
+                <p>
+                    This project combines large-scale neural recordings with continuous multi-animal tracking in an 
+                    outdoor enclosure to determine how place cells and cell assemblies represent home-range boundaries, 
+                    social encounter zones and the evolving relationship between spatial location and social context.
+                </p>
+
+                <h2>Experimental setup</h2>
+                <figure>
+                    <img src="picture/territory_setup.png"
+                         alt="Left: an outdoor grass enclosure covered by netting, containing nine white wooden nest boxes wired for recording, bounded by a green perimeter fence. Right: overhead view inside a nest box showing nesting material, food, and water resources."
+                         loading="lazy" decoding="async" width="1506" height="504">
+                    <figcaption>
+                        The outdoor field enclosure. Animals live continuously in the enclosure with
+                        distributed nest boxes (left) provisioned with nesting material, food, and water
+                        (right), while neural activity and behavior are recorded.
+                    </figcaption>
+                </figure>
+
+                <p><a class="back-link" href="research.html">&larr; All research projects</a></p>
+            </div>
+        </main>
+
+        <footer>
+            <div class="wrap">
+                &copy; 2026 Y. William Zheng &middot; Research portfolio
+            </div>
+        </footer>
     </div>
 </body>
 </html>

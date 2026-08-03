@@ -4,78 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Y. William Zheng</title>
-    <meta name="description" content="About Y. William Zheng — neuroscience researcher and student.">
-    <meta name="keywords" content="William Zheng, William Zheng Cornell, Y. William Zheng, WYZ, about, neuroscience, researcher">
+    <meta name="description" content="Research interests of Y. William Zheng in computational and cognitive neuroscience: hippocampal and prefrontal representations for navigation and memory, and neural encoding of speech and language.">
     <meta name="author" content="Y. William Zheng">
+    <link rel="canonical" href="https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/about.html">
+    <meta property="og:title" content="About | Y. William Zheng">
+    <meta property="og:description" content="Research interests of Y. William Zheng in computational and cognitive neuroscience: hippocampal and prefrontal representations for navigation and memory, and neural encoding of speech and language.">
+    <meta property="og:url" content="https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/about.html">
+    <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet">
-    <style>
-        :root{--bg:#ffffff;--ink:#1a1a1a;--muted:#6b7280;--soft:#9ca3af;--line:#e7e7e7;--accent:#1f6feb;--sidebar:#15294d;--sidebar-soft:rgba(255,255,255,0.72);--sidebar-line:rgba(255,255,255,0.14);--sidebar-active:#ffd166;--sidebar-w:280px;--max:870px;}
-        *{box-sizing:border-box;}
-        html{overflow-y:scroll;}
-        body{margin:0;color:var(--ink);background:var(--bg);font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;font-size:16px;}
-        a{color:var(--accent);text-decoration:none;}
-        a:hover{text-decoration:underline;}
-        .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
-        .sidebar{position:fixed;top:0;left:0;width:var(--sidebar-w);height:100vh;background:var(--sidebar);color:#fff;display:flex;flex-direction:column;align-items:center;text-align:center;padding:40px 26px;overflow-y:auto;}
-        .sidebar .avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;display:block;border:3px solid rgba(255,255,255,0.18);margin-bottom:20px;}
-        .sidebar .name{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.5rem;line-height:1.2;margin:0 0 8px;color:#fff;}
-        .sidebar .tag{color:var(--sidebar-soft);font-size:0.78rem;white-space:nowrap;margin:0 0 14px;}
-        .sidebar .scholar{display:inline-block;color:#fff;font-size:0.9rem;font-weight:500;padding:6px 14px;border:1px solid var(--sidebar-line);border-radius:999px;margin-bottom:26px;}
-        .sidebar .scholar:hover{background:rgba(255,255,255,0.10);text-decoration:none;}
-        .sidebar nav{width:100%;border-top:1px solid var(--sidebar-line);padding-top:18px;}
-        .sidebar nav a{display:block;color:var(--sidebar-soft);font-size:0.98rem;font-weight:500;padding:9px 0;border-radius:6px;transition:color 0.15s ease;}
-        .sidebar nav a:hover{color:#fff;text-decoration:none;}
-        .sidebar nav a.active{color:var(--sidebar-active);font-weight:600;}
-        .content{margin-left:var(--sidebar-w);}
-        .page{padding:48px 0 24px;}
-        .page h1{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:clamp(2rem,5vw,2.8rem);line-height:1.12;margin:0 0 16px;letter-spacing:-0.01em;}
-        .page p{color:#333;margin:0 0 16px;}
-        .back-link{display:inline-block;margin-top:16px;font-weight:500;}
-        @media(max-width:900px){
-            :root{--sidebar-w:0px;}
-            .sidebar{position:static;width:100%;height:auto;flex-direction:column;padding:28px 26px;}
-            .sidebar nav{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 18px;}
-            .sidebar nav a{padding:6px 0;}
-            .content{margin-left:0;}
-        }
-    </style>
+    <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <aside class="sidebar">
         <a href="index.html"><img class="avatar" src="picture/william_profile_pic.jpg" alt="Portrait of Y. William Zheng"></a>
         <p class="name">Y. William Zheng</p>
-        <p class="tag">Undergraduate Student @ Cornell NBB</p>
-        <a class="scholar" href="https://scholar.google.com/" target="_blank" rel="noreferrer">Google Scholar</a>
-        <nav>
-            <a class="active" href="index.html#about">About</a>
-            <a href="index.html#projects">Research</a>
-            <a href="index.html#proposals">Proposals</a>
-            <a href="index.html#experience">Past Work</a>
+        <p class="tag">Neurobiology &amp; Behavior<br>Cornell University</p>
+        <nav aria-label="Main">
+            <a href="index.html">Home</a>
+            <a href="about.html" aria-current="page">About</a>
+            <a href="publications.html">Publications</a>
+            <a href="research.html">Research</a>
             <a href="index.html#contact">Contact</a>
         </nav>
+        <div class="side-links">
+            <a href="https://scholar.google.com/citations?user=ODMxjj0AAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a href="https://github.com/williamyixiangzheng" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="writing.html">Research Ideas</a>
+        </div>
     </aside>
 
     <div class="content">
-        <main class="page">
-            <div class="wrap">
-                <h1>About Me</h1>
+        <main id="main" class="page">
+            <div class="wrap prose">
+                <h1>About</h1>
+
                 <p>
-                    Welcome to my personal website! I'm an undergraduate student at Cornell in the Department of
-                    Neurobiology and Behavior, with a passion for computational and cognitive neuroscience — learning
-                    and memory, speech encoding/decoding, and brain–machine interfaces.
+                    I am interested in computational and cognitive neuroscience, especially how the brain
+                    builds structured internal representations that support learning, memory, communication,
+                    and flexible behavior. Broadly, I want to understand how neural systems allow us to learn
+                    from experience, organize knowledge across time, transform thought into speech and
+                    language, and use these representations to guide flexible behavior. In spatial navigation,
+                    I am interested in how the hippocampus and prefrontal cortex represent environments,
+                    routes, goals, and memories. In language, I am exploring how neural populations encode
+                    speech, meaning, and abstract structure to support the communication of complex ideas.
                 </p>
+
                 <p>
-                    You can read my full introduction, current research, proposals, and past work on the home page.
+                    Before entering university, I was introduced to neuroscience by <a href="https://web.bio.pku.edu.cn/UHPB/index.php?m=Index&a=teacher_cont&id=86&cid=20" target="_blank" rel="noopener noreferrer">Dr. Chenjian Li</a> and Dr. Sushuang 
+                    Zheng at Peking University, where I contributed to developing a CRISPR-based therapeutic strategy 
+                    for Huntington's disease in a mouse model. Beyond teaching me molecular and experimental approaches, 
+                    they showed me how fundamental research can be translated toward medicine and how scientific advances 
+                    can affect the broader public. Over the past decade, their mentorship has shaped not only my interest 
+                    in biology and neuroscience, but also my understanding of what it means to pursue research with rigor,
+                     responsibility, and integrity. I remain deeply grateful for their guidance.
                 </p>
+
                 <p>
-                    If you'd like to get in touch, feel free to reach out via
-                    <a href="mailto:ywilliamzheng@gmail.com">email</a>.
+                    At Cornell, my work in
+                    <a href="https://braincomputation.org/people/" target="_blank" rel="noopener noreferrer">Dr. Antonio Fernandez-Ruiz and Dr. Azahara Oliva&rsquo;s lab</a>
+                    (the people who first brought me into computational neuroscience!!! yay!!!) has focused on
+                    how hippocampal and cortical circuits support learning, memory, and spatial navigation
+                    across different timescales and environments. In addition to complex animal behavioral
+                    tasks and surgery skills, I have learned how to preprocess neural data, apply
+                    dimensionality reduction, analyze topology and neural manifolds, gain hands-on exposure to
+                    neural data logger hardware development, and, most importantly, problem solving skills and
+                    characteristics in being persistent.
                 </p>
-                <p><a class="back-link" href="index.html#about">&larr; Read the full introduction</a></p>
+
+                <p>
+                    More recently, I have also become interested in speech and language, with the great
+                    opportunity to explore these questions in
+                    <a href="https://zivwilliams.mgh.harvard.edu/" target="_blank" rel="noopener noreferrer">Dr. Ziv Williams&rsquo;s lab</a>
+                    at Mass General Hospital and Harvard. I am studying neural encoding, decoding, and speech
+                    production, with a particular focus on how single neurons and neural populations represent
+                    phonetic, syntactic, and semantic information. I am especially interested in using GLMs,
+                    decoding models, representational geometry, and manifold analysis to explain how the brain
+                    represents linguistic structure and abstract concepts at both the single-cell and
+                    population levels.
+                </p>
+
+                <p><a class="back-link" href="index.html">&larr; Back to home</a></p>
             </div>
         </main>
+
+        <footer>
+            <div class="wrap">
+                &copy; 2026 Y. William Zheng &middot; Research portfolio
+            </div>
+        </footer>
     </div>
 </body>
 </html>

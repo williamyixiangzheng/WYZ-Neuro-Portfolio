@@ -3,536 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Y. William Zheng | Neuroscience Research Portfolio</title>
-    <meta name="description" content="Y. William Zheng — computational neuroscience researcher. Portfolio of projects in neural drift, electrode fabrication, fieldwork, and research at Peking University.">
-    <meta name="keywords" content="William Zheng, William Zheng Cornell, Y. William Zheng, WYZ, neuroscience, computational neuroscience, neural drift, Project Drift, Peking University, research portfolio, SfN 2025, electrode fabrication, neural manifold">
+    <title>Y. William Zheng | Computational Neuroscience Research</title>
+    <meta name="description" content="Research portfolio of Y. William Zheng, a Cornell undergraduate studying neural population dynamics, memory, navigation, speech, and language using electrophysiology and computational modeling.">
     <meta name="author" content="Y. William Zheng">
+    <link rel="canonical" href="https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/">
     <meta name="google-site-verification" content="AmFQ4_zgq5oTHg2fsZ6iu706X5V8SaNSujePsSS-taU" />
-    <meta property="og:title" content="Y. William Zheng | Neuroscience Research Portfolio">
-    <meta property="og:description" content="Portfolio of neuroscience research projects by Y. William Zheng, including neural drift, electrode fabrication, and research at Peking University.">
+    <meta property="og:title" content="Y. William Zheng | Computational Neuroscience Research">
+    <meta property="og:description" content="Research portfolio of Y. William Zheng, a Cornell undergraduate studying neural population dynamics, memory, navigation, speech, and language using electrophysiology and computational modeling.">
     <meta property="og:url" content="https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #ffffff;
-            --ink: #1a1a1a;
-            --muted: #6b7280;
-            --soft: #9ca3af;
-            --line: #e7e7e7;
-            --accent: #1f6feb;
-            --sidebar: #15294d;          /* dark blue */
-            --sidebar-soft: rgba(255,255,255,0.72);
-            --sidebar-line: rgba(255,255,255,0.14);
-            --sidebar-active: #ffd166;   /* highlight color for current section */
-            --sidebar-w: 280px;
-            --max: 870px;
-        }
-
-        * { box-sizing: border-box; }
-
-        html { scroll-behavior: smooth; overflow-y: scroll; }
-
-        body {
-            margin: 0;
-            color: var(--ink);
-            background: var(--bg);
-            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            line-height: 1.65;
-            font-size: 16px;
-        }
-
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-
-        .wrap {
-            max-width: var(--max);
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* ---------- Left sidebar ---------- */
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: var(--sidebar-w);
-            height: 100vh;
-            background: var(--sidebar);
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 40px 26px;
-            overflow-y: auto;
-        }
-
-        .sidebar .avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            display: block;
-            border: 3px solid rgba(255,255,255,0.18);
-            margin-bottom: 20px;
-        }
-
-        .sidebar .name {
-            font-family: "Newsreader", Georgia, serif;
-            font-weight: 600;
-            font-size: 1.5rem;
-            line-height: 1.2;
-            margin: 0 0 8px;
-            color: #fff;
-        }
-
-        .sidebar .tag {
-            color: var(--sidebar-soft);
-            font-size: 0.78rem;
-            white-space: nowrap;
-            margin: 0 0 14px;
-        }
-
-        .sidebar .scholar {
-            display: inline-block;
-            color: #fff;
-            font-size: 0.9rem;
-            font-weight: 500;
-            padding: 6px 14px;
-            border: 1px solid var(--sidebar-line);
-            border-radius: 999px;
-            margin-bottom: 26px;
-        }
-        .sidebar .scholar:hover { background: rgba(255,255,255,0.10); text-decoration: none; }
-
-        .sidebar nav {
-            width: 100%;
-            border-top: 1px solid var(--sidebar-line);
-            padding-top: 18px;
-        }
-
-        .sidebar nav a {
-            display: block;
-            color: var(--sidebar-soft);
-            font-size: 0.98rem;
-            font-weight: 500;
-            padding: 9px 0;
-            border-radius: 6px;
-            transition: color 0.15s ease;
-        }
-
-        .sidebar nav a:hover { color: #fff; text-decoration: none; }
-
-        .sidebar nav a.active {
-            color: var(--sidebar-active);
-            font-weight: 600;
-        }
-
-        .content { margin-left: var(--sidebar-w); }
-
-        /* ---------- Header ---------- */
-        header.hero {
-            padding: 56px 0 8px;
-        }
-
-        .hero h1 {
-            font-family: "Newsreader", Georgia, serif;
-            font-weight: 600;
-            font-size: clamp(2.4rem, 6vw, 3.4rem);
-            line-height: 1.05;
-            margin: 0 0 10px;
-            letter-spacing: -0.01em;
-        }
-
-        .hero .affil {
-            color: var(--muted);
-            font-size: 1.05rem;
-            margin: 0 0 2px;
-        }
-
-        .hero .links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-            margin-top: 18px;
-            font-size: 0.95rem;
-        }
-
-        .hero .links a { font-weight: 500; }
-
-        /* ---------- Sections ---------- */
-        section { padding: 40px 0 8px; scroll-margin-top: 24px; }
-
-        h2.section-title {
-            font-family: "Newsreader", Georgia, serif;
-            font-weight: 600;
-            font-size: 1.7rem;
-            margin: 0 0 4px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--line);
-        }
-
-        .lede {
-            color: #333;
-            font-size: 1.02rem;
-            margin: 20px 0 0;
-        }
-        .lede p { margin: 0 0 14px; }
-        .lede p:last-child { margin-bottom: 0; }
-
-        /* ---------- Item rows (image + text) ---------- */
-        .item {
-            display: grid;
-            grid-template-columns: 150px 1fr;
-            gap: 22px;
-            padding: 24px 0;
-            border-bottom: 1px solid var(--line);
-            align-items: start;
-        }
-        .item:last-child { border-bottom: none; }
-
-        .item.no-thumb { grid-template-columns: 1fr; }
-
-        .item .thumb {
-            width: 150px;
-            height: 110px;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 1px solid var(--line);
-            background: #f3f4f6;
-        }
-
-        .item h3 {
-            margin: 2px 0 6px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            line-height: 1.35;
-        }
-
-        .item h3 a { color: var(--ink); }
-        .item h3 a:hover { color: var(--accent); }
-
-        .item .meta {
-            display: inline-block;
-            font-size: 0.78rem;
-            font-weight: 600;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-            color: var(--soft);
-            margin-bottom: 4px;
-        }
-
-        .wip {
-            display: inline-block;
-            background: #fff4d6;
-            color: #8a6d1a;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            padding: 3px 10px;
-            border-radius: 999px;
-            margin-bottom: 8px;
-        }
-
-        .item p {
-            margin: 0 0 10px;
-            color: #444;
-            font-size: 0.97rem;
-        }
-
-        .item .row-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .status {
-            display: inline-block;
-            font-size: 0.82rem;
-            color: var(--muted);
-            margin-bottom: 8px;
-        }
-        .status::before { content: "•  "; color: var(--soft); }
-
-        /* ---------- Contact ---------- */
-        .contact-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            margin-top: 18px;
-            font-size: 0.97rem;
-            font-weight: 500;
-        }
-
-        footer {
-            margin-top: 48px;
-            padding: 24px 0 56px;
-            border-top: 1px solid var(--line);
-            color: var(--soft);
-            font-size: 0.88rem;
-        }
-
-        @media (max-width: 900px) {
-            :root { --sidebar-w: 0px; }
-            .sidebar {
-                position: static;
-                width: 100%;
-                height: auto;
-                flex-direction: column;
-                padding: 28px 26px;
-            }
-            .sidebar nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 4px 18px;
-            }
-            .sidebar nav a { padding: 6px 0; }
-            .content { margin-left: 0; }
-        }
-
-        @media (max-width: 560px) {
-            .item { grid-template-columns: 1fr; }
-            .item .thumb { width: 100%; height: 180px; }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <aside class="sidebar">
-        <img class="avatar" src="picture/william_profile_pic.jpg" alt="Portrait of Y. William Zheng">
+        <a href="index.html"><img class="avatar" src="picture/william_profile_pic.jpg" alt="Portrait of Y. William Zheng"></a>
         <p class="name">Y. William Zheng</p>
-        <p class="tag">Undergraduate Student @ Cornell NBB</p>
-        <a class="scholar" href="https://scholar.google.com/citations?user=ODMxjj0AAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
-        <nav id="sidenav">
-            <a href="#about">About</a>
-            <a href="#projects">Research</a>
-            <a href="#proposals">Proposals</a>
-            <a href="#experience">Past Work</a>
-            <a href="#contact">Contact</a>
+        <p class="tag">Department of Neurobiology &amp; Behavior<br>Cornell University</p>
+        <nav aria-label="Main">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="about.html">About</a>
+            <a href="publications.html">Publications</a>
+            <a href="research.html">Research</a>
+            <a href="index.html#contact">Contact</a>
         </nav>
+        <div class="side-links">
+            <a href="https://scholar.google.com/citations?user=ODMxjj0AAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a href="https://github.com/williamyixiangzheng" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="writing.html">Research Ideas</a>
+            <!-- TODO: add CV once a public PDF exists, e.g. <a href="cv/YWZheng_CV.pdf">CV (PDF)</a> -->
+        </div>
     </aside>
 
     <div class="content">
     <header class="hero">
         <div class="wrap">
             <h1>Y. William Zheng</h1>
-            <p class="affil">Welcome to my personal webpage!</p>
-            <p class="affil">I'm an undergraduate student at Cornell University, Department of Neurobiology and Behavior (NBB).</p>
-            <p class="affil">I'm interested in computational neuroscience &amp; cognitive neuroscience - learning and memory, speech encoding/decoding, and brain machine-interfaces (BMI)</p>
-            <div class="links">
-                <a href="mailto:ywz2@cornell.edu">Email</a>
+            <p class="role">
+                Hi there, welcome to my personal webpage and computational neuroscience portfolio!
+            </p>
+            <p class="affil">
+                I'm an undergrad at Cornell University, Department of Neurobiology and Behavior (NBB). I'm interested in
+                computational and cognitive neuroscience in studying learning, memory, spatial navigation, speech, and language.
+                Particularly, I study hippocampal&ndash;prefrontal population dynamics and speech production at the single-cell level.
+            </p>
+            <div class="hero-links">
+                <a href="research.html">Research</a>
+                <a href="publications.html">Publications</a>
+                    <a href="https://scholar.google.com/citations?user=ODMxjj0AAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
                 <a href="https://github.com/williamyixiangzheng" target="_blank" rel="noreferrer">GitHub</a>
-                <a href="https://scholar.google.com/citations?user=ODMxjj0AAAAJ&hl=en">Google Scholar</a>
+                <a href="mailto:ywz2@cornell.edu">Email</a>
             </div>
         </div>
     </header>
 
-    <main>
-        <!-- 1. Introduction / About -->
-        <section id="about">
+    <main id="main">
+        <section>
             <div class="wrap">
-                <h2 class="section-title">About</h2>
-                <div class="lede">
-                    <p>
-                        I am interested in computational and cognitive neuroscience, especially how the brain 
-                        builds structured internal representations that support learning, memory, communication, 
-                        and flexible behavior. Broadly, I want to understand how neural systems allow us to learn 
-                        from experience, organize knowledge across time, transform thought into speech and language, 
-                        and use these representations to guide flexible behavior. In spatial navigation, I am interested 
-                        in how the hippocampus and prefrontal cortex represent environments, routes, goals, and memories.
-                         In language, I am exploring how neural populations encode speech, meaning, and abstract structure 
-                         to support the communication of complex ideas.
-
-                    </p>
-                    <p>
-                        At Cornell, my work in <a href="https://braincomputation.org/" target="_blank" rel="noreferrer" style="text-decoration: underline;">Dr. Antonio Fernandez-Ruiz and Dr. Azahara Oliva’s lab</a> (the people who
-                        first brought me into computational neuroscience!!! yay!!!) has focused on how hippocampal and cortical
-                         circuits support learning, memory, and spatial navigation across different timescales and 
-                         environments. In addition to complex animal behavioral tasks and surgery skills, I have learned 
-                         how to preprocess neural data, apply dimensionality reduction, analyze topology and neural manifolds,
-                          gain hands-on exposure to neural data logger hardware development, and, most importantly, problem solving
-                          skills and characteristics in being persistant.
-                    </p>
-                    <p>
-                        More recently, I have also become interested in speech and language, with the great opportunity to explore 
-                        these questions in <a href="https://zivwilliams.mgh.harvard.edu/" target="_blank" rel="noreferrer" style="text-decoration: underline;">Dr. Ziv Williams’s lab</a> at Mass General Hospital and Harvard. I am studying neural encoding,
-                         decoding, and speech production, with a particular focus on how single neurons and neural populations represent 
-                         phonetic, syntactic, and semantic information. I am especially interested in using GLMs, decoding models, 
-                         representational geometry, and manifold analysis to explain how the brain represents linguistic structure 
-                         and abstract concepts at both the single-cell and population levels.
-                    </p>
-                </div>
+                <h2>Research interests</h2>
+                <p>
+                    I'm interested in how neural systems learn from experience, organize knowledge across
+                    time, generate speech and language, and use internal representations to guide flexible
+                    behavior. My work combines electrophysiology, statistical modeling, and neural population
+                    analyses.
+                </p>
             </div>
         </section>
 
-        <!-- 2. Research Projects -->
-        <section id="projects">
+        <section>
             <div class="wrap">
-                <h2 class="section-title">Research Projects</h2>
+                <h2>Featured work</h2>
 
-                <article class="item">
-                    <img class="thumb" src="picture/sfn_2025_drift.png" alt="Project Drift — SfN 2025">
-                    <div>
-                        <span class="meta">Project Drift</span>
-                        <h3><a href="Project_Drift.html">A hippocampal population code for rapid generalization</a></h3>
-                        <span class="status">Pre-print</span>
+                <div class="featured">
+                    <article class="card">
+                        <div class="card-head">
+                            <h3>Sentence Construction GLMs Project</h3>
+                        </div>
+                        <p class="card-meta">Massachusetts General Hospital &amp; Harvard University &middot; <span class="pill pill--prep">manuscript in prep.</span></p>
                         <p>
-                            CA1 population activity uses a disentangled code for location, time, and choice.
-                            CA3 and MEC inputs set spatial remapping, while local CA1 PV-interneurons drive
-                            representational drift.
+                            <strong>Question:</strong> How are linguistic and behavioral variables represented across cortical layers, time, 
+                            and neural populations during human speech production?
                         </p>
+                        <p class="underlined">
+                            More details will be updated once the manuscript is ready for public release.
+                            Feel free to reach out to me if you're interested in knowing more about this project!
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-head">
+                            <h3><a href="Project_Thesis.html">Topological evolution of hippocampal&ndash;prefrontal manifolds during long-term learning</a></h3>
+                        </div>
+                        <p class="card-meta">Cornell University &middot; Honors thesis &middot; <span class="pill pill--ongoing">ongoing</span></p>
+                        <p>
+                            How do hippocampal and prefrontal population representations change as animals
+                            learn a progressively expanded environment over extended timescales?
+                        </p>
+                        <p><strong>My contribution:</strong> Design longitudinal CA1-PFC population recordings; 
+                            apply neural manifold, topological data analysis, and representational alignment methods
+                            to characterize how neural representations evolve during learning.</p>
+                        <div class="row-links"><a href="Project_Thesis.html">Project page</a></div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-head">
+                            <h3><a href="Project_Drift.html">A hippocampal population code for rapid generalization</a></h3>
+                        </div>
+                        <p class="card-meta">Cornell University &middot; <span class="pill pill--preprint">manuscript under review</span></p>
+                        <p>
+                            How does the hippocampus form neural representations that support rapid generalization across related experiences?
+                        </p>
+                        <p><strong>My contribution:</strong> Contributed to behavioral experiments, optogenetic surgeries, neural data preprocessing,
+                        and population-level analyses, supporting the investigation of hippocampal representation underlying rapid generalization.</p>
                         <div class="row-links">
                             <a href="Project_Drift.html">Project page</a>
                             <a href="https://www.biorxiv.org/content/10.1101/2025.03.15.643456v1" target="_blank" rel="noreferrer">Preprint</a>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="item">
-                    <img class="thumb" src="picture/territory_setup.png" alt="Project Territory — outdoor enclosure setup">
-                    <div>
-                        <span class="meta">Project Territory</span>
-                        <h3><a href="Project_Fieldwork.html">A socio-spatial cognitive map of a naturalistic environment</a></h3>
-                        <span class="status">In prep / unpublished manuscript</span>
-                        <p>
-                            We study male mice living in a semi-natural outdoor enclosure, recording hippocampal
-                            place-cell activity as they form, defend, and intrude into territory.
-                        </p>
-                        <div class="row-links">
-                            <a href="Project_Fieldwork.html">Project page</a>
+                    <article class="card">
+                        <div class="card-head">
+                            <h3><a href="Project_Fieldwork.html">A socio-spatial cognitive map of a naturalistic environment</a></h3>
                         </div>
-                    </div>
-                </article>
+                        <p class="card-meta">Cornell University &middot; <span class="pill pill--prep">manuscript in prep.</span></p>
+                        <p>
+                            How do hippocampal neural representations support spatial navigation and social interactions in naturalistic environments? 
+                        </p>
+                        <p><strong>My contribution:</strong> Performed Neuropixels surgeries, support naturalistic multi-animal experiments, 
+                        develop automated multi-animal identity-tracking workflows, and contribute to neural and behavioral data analyses.</p>
+                        <div class="row-links"><a href="Project_Fieldwork.html">Project page</a></div>
+                    </article>
 
-                <article class="item">
-                    <img class="thumb" src="picture/sfn_drift_william.png" alt="Project Fabrication — flexible probe work">
-                    <div>
-                        <span class="meta">Project Fabrication</span>
-                        <h3><a href="Project_Fabrication.html">Long-term neural recordings across memory circuits with high-density flexible probes</a></h3>
-                        <span class="status">In prep / unpublished manuscript</span>
-                        <p>
-                            We develop polymer-based flexible thin-film probes to overcome the tissue-device
-                            mismatch of rigid silicon probes, enabling stable long-term single-neuron tracking.
-                        </p>
-                        <div class="row-links">
-                            <a href="Project_Fabrication.html">Project page</a>
+                    <article class="card">
+                        <div class="card-head">
+                            <h3><a href="Project_Fabrication.html">Long-term, large-scale neural recordings across memory circuits with high-density flexible probes</a></h3>
                         </div>
-                    </div>
-                </article>
+                        <p class="card-meta">Cornell University &middot; <span class="pill pill--prep">manuscript in prep.</span></p>
+                        <p>
+                            How do hippocampal neural representations evolve over months of experience, and how reliably can individual
+                            neurons be tracked across long-term recordings(~300 days)?
+                        </p>
+                        <p><strong>My contribution:</strong> Conducted behavioral experiments and performed longitudinal analysis of single-neuron
+                        and place-cell stability across long-term recordings.</p>
+                        <div class="row-links"><a href="Project_Fabrication.html">Project page</a></div>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-head">
+                            <h3><a href="Research_In_Peking_University.html">Muscle atrophy and gene-therapy research in Huntington's disease</a></h3>
+                        </div>
+                        <p class="card-meta">Peking University</p>
+                        <p>
+                            Can CRISPR-based gene editing safely and durably reverse Huntington's disease pathology and behavioral
+                            deficits across different stages of disease progression?
+                        </p>
+                        <p><strong>My contribution (non-author contribution):</strong> Performed PCR, cell culture, mouse behavioral experiments, 
+                        stereotaxic AAV injections, perfusion, and histological imaging.</p>
+                        <div class="row-links"><a href="Research_In_Peking_University.html">Experience page</a></div>
+                    </article>
+                </div>
+
+                <p style="margin-top:26px;"><a href="research.html">All research projects &rarr;</a></p>
             </div>
         </section>
 
-        <!-- 3. Research Proposals -->
-        <section id="proposals">
-            <div class="wrap">
-                <h2 class="section-title">Research Proposals</h2>
-
-                <article class="item no-thumb">
-                    <div>
-                        <span class="meta">Proposal 01 · AD · Topology · Neural manifolds</span>
-                        <h3><a href="proposal_doc/AD_NeuralManifold_v3.pdf" download="AD_NeuralManifold_v3.pdf">Circuit mechanisms of representational drift and neural manifold collapse in Alzheimer's Disease</a></h3>
-                        <p>
-                            A developing proposal on how pathological circuit changes may reshape drift,
-                            destabilize neural manifolds, and impair stable memory representations in disease.
-                        </p>
-                        <div class="row-links">
-                            <a href="proposal_doc/AD_NeuralManifold_v3.pdf" download="AD_NeuralManifold_v3.pdf">Read proposal draft (PDF)</a>
-                        </div>
-                    </div>
-                </article>    
-
-                <article class="item no-thumb">
-                    <div>
-                        <span class="meta">Proposal 02 · BMI · Hippocampal replay · RL</span>
-                        <h3><a href="proposal_doc/BioNB3500_Mini-Grant Proposal v4R.pdf" download="BioNB3500_Mini-Grant_Proposal_v4R.pdf">Closed-loop prioritized hippocampal replay in a brain–machine interface of value-biased choice</a></h3>
-                        <p>
-                            A closed-loop BMI experiment testing whether hippocampal sequences function as
-                            prioritized experience replay - selectively reinforcing high-value trajectories in
-                            real time to accelerate learning in a probabilistic T-maze task (BioNB 3300 Neural-AI Final Project).
-                        </p>
-                        <div class="row-links">
-                            <a href="proposal_doc/BioNB3500_Mini-Grant Proposal v4R.pdf" download="BioNB3500_Mini-Grant_Proposal_v4R.pdf">Read proposal draft (PDF)</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="item no-thumb">
-                    <div>
-                        <span class="meta">Proposal 03 · Hippocampus-PFC · Manifolds · Memory consolidation</span>
-                        <h3>Topological evolution of hippocampal-prefrontal manifolds during long-term spatial memory consolidation</h3>
-                        <span class="wip">Work in progress</span>
-                        <p>
-                            How do memories consolidate? As mice explore a maze that expands from a local to a global
-                            layout over 28 days, we track the same neurons across two brain regions. By observing these
-                            neural patterns reshape themselves, we see how new routes take hold and familiar paths
-                            stabilize into long-term memory.
-                        </p>
-                    </div>
-                </article>
-
-                <article class="item no-thumb">
-                    <div>
-                        <span class="meta">Proposal 04 · GLM encoding · TDA · CA1-PFC</span>
-                        <h3>Linking single-cell encoding and population manifold topology during spatial memory consolidation</h3>
-                        <span class="wip">Work in progress</span>
-                        <p>
-                            This project investigates how hippocampal and prefrontal neural population activity
-                            reorganizes as a mouse learns a progressively expanding maze over 28 days. By combining
-                            GLM-based single-neuron encoding models with manifold learning and topological data analysis,
-                            it aims to reveal how fragile spatial representations become stable long-term memory
-                            structures across the CA1-PFC network.
-                        </p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- 4. Past Research Experiences and Others -->
-        <section id="experience">
-            <div class="wrap">
-                <h2 class="section-title">Past Research Experiences &amp; Others</h2>
-
-                <article class="item">
-                    <img class="thumb" src="picture/pek_striatum.JPG" alt="Brain slice from Peking University research">
-                    <div>
-                        <span class="meta">Peking University</span>
-                        <h3><a href="Research_In_Peking_University.html">My first impression of neuroscience: molecular work on Huntington's Disease</a></h3>
-                        <p>
-                            Earlier work in <a href="https://web.bio.pku.edu.cn/UHPB/index.php?m=Index&amp;a=teacher_cont&amp;id=86&amp;cid=20" target="_blank" rel="noreferrer" style="text-decoration: underline;">Dr. Chenjian Li's lab</a> at Peking University on Huntington's Disease
-                            using the CRISPR system.
-                        </p>
-                        <p style="font-size:0.88rem;color:var(--muted);">
-                            Yuanyi Dai <em>et al.</em>, Self-inactivating AAV-CRISPR at different ages enables sustained
-                            amelioration of Huntington's disease deficits in BAC226Q mice. <em>Sci. Adv.</em> 12, eaea8052 (2026).
-                        </p>
-                        <div class="row-links">
-                            <a href="Research_In_Peking_University.html">Experience page</a>
-                            <a href="https://www.science.org/doi/10.1126/sciadv.aea8052" target="_blank" rel="noreferrer">Publication</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- 5. Contact -->
         <section id="contact">
             <div class="wrap">
-                <h2 class="section-title">Contact</h2>
-                <div class="lede">
-                    <p>
-                        If any project, proposal, or research direction here intrigues you, feel free to
-                        reach out. I'd be glad to talk about computational and cognitive neuroscience. 
-                    </p>
-                </div>
-                <div class="contact-links">
+                <h2>Contact</h2>
+                <p>
+                    Feel free to reach out if you have any questions, comments, or collaboration ideas!
+                </p>
+                <div class="row-links">
                     <a href="mailto:ywz2@cornell.edu">ywz2@cornell.edu</a>
-                    <a href="mailto:ywz2@cornell.edu">ywzheng@mgh.harvard.edu</a>
+                    <a href="mailto:ywzheng@mgh.harvard.edu">ywzheng@mgh.harvard.edu</a>
+                    <a href="https://scholar.google.com/citations?user=ODMxjj0AAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+                    <a href="https://github.com/williamyixiangzheng" target="_blank" rel="noreferrer">GitHub</a>
                 </div>
             </div>
         </section>
@@ -540,29 +189,9 @@
 
     <footer>
         <div class="wrap">
-            © 2026 Y. William Zheng · Research portfolio
+            &copy; 2026 Y. William Zheng &middot; Research portfolio
         </div>
     </footer>
     </div>
-
-    <script>
-        // Scroll-spy: highlight the sidebar link for the section currently in view.
-        const links = document.querySelectorAll('#sidenav a');
-        const map = {};
-        links.forEach(a => { map[a.getAttribute('href').slice(1)] = a; });
-        const sections = document.querySelectorAll('main section');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    links.forEach(a => a.classList.remove('active'));
-                    const active = map[entry.target.id];
-                    if (active) active.classList.add('active');
-                }
-            });
-        }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
-
-        sections.forEach(s => observer.observe(s));
-    </script>
 </body>
 </html>
