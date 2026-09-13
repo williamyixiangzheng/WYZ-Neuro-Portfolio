@@ -333,10 +333,10 @@ p { color: var(--body); margin: 0 0 16px; }
 }
 .featured .card { border-bottom: 1px solid var(--line-soft); }
 
-/* The homepage shows at most six featured projects; anything beyond the sixth
-   belongs on the Research page. Keep the markup to six cards -- this rule is a
+/* The homepage shows at most eight featured projects; anything beyond the eighth
+   belongs on the Research page. Keep the markup to eight cards -- this rule is a
    guard, and hidden cards are still in the DOM for crawlers and screen readers. */
-.featured .card:nth-child(n + 7) { display: none; }
+.featured .card:nth-child(n + 9) { display: none; }
 
 /* Underlined body text. Offset so descenders stay legible. */
 .underlined {
