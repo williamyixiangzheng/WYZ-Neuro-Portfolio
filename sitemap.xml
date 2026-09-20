@@ -49,6 +49,12 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/photography.html</loc>
+    <lastmod>2026-09-20</lastmod>
+    <priority>0.5</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/writing.html</loc>
     <lastmod>2026-07-27</lastmod>
     <priority>0.5</priority>

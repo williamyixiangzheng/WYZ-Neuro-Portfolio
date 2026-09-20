@@ -391,6 +391,22 @@ figcaption {
     margin-top: 8px;
 }
 
+/* ---------- Photo gallery ---------- */
+/* Columns rather than a grid, so portrait and landscape frames keep their own
+   aspect ratios instead of being cropped to a shared cell height. */
+.photo-grid {
+    columns: 2;
+    column-gap: 18px;
+    margin-top: 28px;
+}
+.photo-grid .photo {
+    margin: 0 0 18px;
+    break-inside: avoid;
+}
+@media (max-width: 700px) {
+    .photo-grid { columns: 1; }
+}
+
 /* ---------- Pipeline diagram (original asset, no data shown) ---------- */
 .pipeline {
     list-style: none;
