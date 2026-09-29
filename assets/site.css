@@ -324,14 +324,21 @@ p { color: var(--body); margin: 0 0 16px; }
     margin-bottom: 5px;
 }
 
-/* Home featured cards: two side-by-side columns, collapsing to one on narrow
-   screens. Reading order is left-to-right, then down. */
-.featured {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    gap: 0 36px;
-}
+/* Home featured cards: one project per row. A project with a shareable image
+   (.card--figure) shows text on the left and the image on the right; the rest
+   span the full row. Stacks to text-then-image on narrow screens. */
 .featured .card { border-bottom: 1px solid var(--line-soft); }
+.featured .card--figure {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0 36px;
+    align-items: center;
+}
+.card-figure { margin: 0; }
+@media (max-width: 700px) {
+    .featured .card--figure { grid-template-columns: 1fr; }
+    .card-figure { margin-top: 8px; }
+}
 
 /* The homepage shows at most eight featured projects; anything beyond the eighth
    belongs on the Research page. Keep the markup to eight cards -- this rule is a
