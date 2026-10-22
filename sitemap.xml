@@ -60,4 +60,10 @@
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
+  <url>
+    <loc>https://williamyixiangzheng.github.io/WYZ-Neuro-Portfolio/Project_Speech.html</loc>
+    <lastmod>2026-10-21</lastmod>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 </urlset>
