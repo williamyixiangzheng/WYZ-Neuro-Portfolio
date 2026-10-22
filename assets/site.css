@@ -336,7 +336,7 @@ p { color: var(--body); margin: 0 0 16px; }
 }
 .card-figure { margin: 0; }
 /* For tall images that would otherwise dominate the card. */
-.card-figure--small { width: 100%; max-width: 300px; justify-self: center; }
+.card-figure--small { width: 100%; max-width: 220px; justify-self: center; }
 @media (max-width: 700px) {
     .featured .card--figure { grid-template-columns: 1fr; }
     .card-figure { margin-top: 8px; }
